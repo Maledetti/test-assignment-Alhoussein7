@@ -6,4 +6,7 @@
 
     <groupId>com.example</groupId>
     <artifactId>AI_for_Data_Science</artifactId>
-    <version>1.0
+    <version>1.0-SNAPSHOT</version>
+    <name>AI_for_Data_Science</name>
+
+    <
