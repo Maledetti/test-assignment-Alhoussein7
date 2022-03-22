@@ -10,4 +10,6 @@
     <name>AI_for_Data_Science</name>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sou
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <junit.version>5.8.1</junit.version>
+    </p
