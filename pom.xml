@@ -32,4 +32,5 @@
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
-            <artifactId>java
+            <artifactId>javafx-controls</artifactId>
+            <version>17.0.0.1</version>
