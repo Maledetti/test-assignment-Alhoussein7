@@ -68,4 +68,5 @@
     <build>
         <plugins>
             <plugin>
-                <gro
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-
