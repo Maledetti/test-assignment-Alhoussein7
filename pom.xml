@@ -86,4 +86,5 @@
                 </configuration>
             </plugin>
             <plugin>
-                <group
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx
