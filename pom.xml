@@ -91,3 +91,4 @@
                 <version>0.0.6</version>
                 <executions>
                     <execution>
+                        <!-- Default configuration for running with: mvn
