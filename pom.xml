@@ -95,4 +95,5 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.ai_for_da
+                                com.example.ai_for_data_science/com.example.ai_for_data_science.Connect4
+            
