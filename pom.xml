@@ -96,4 +96,5 @@
                         <configuration>
                             <mainClass>
                                 com.example.ai_for_data_science/com.example.ai_for_data_science.Connect4
-            
+                            </mainClass>
+                        </configurat
