@@ -8,4 +8,9 @@ import com.example.ai_for_data_science.players.algorithms.svm.ScorePlayers;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import jav
+import java.util.Arrays;
+
+
+public class Connect4 {
+
+    private int[] gameBoard = new int[4
