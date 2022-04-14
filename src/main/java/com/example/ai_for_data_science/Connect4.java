@@ -13,4 +13,5 @@ import java.util.Arrays;
 
 public class Connect4 {
 
-    private int[] gameBoard = new int[4
+    private int[] gameBoard = new int[42];      // Default value is 0
+    private ArrayList<Integer> moveOrder = new
