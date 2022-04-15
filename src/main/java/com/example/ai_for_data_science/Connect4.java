@@ -24,4 +24,5 @@ public class Connect4 {
         gameBoard = new int[42];
     }
 
-    public void play(Al
+    public void play(Algorithm player1, Algorithm player2) {
+        int gameIsFinished =
