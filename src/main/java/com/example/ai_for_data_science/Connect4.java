@@ -21,4 +21,7 @@ public class Connect4 {
     }
 
     public void reset() {
-  
+        gameBoard = new int[42];
+    }
+
+    public void play(Al
