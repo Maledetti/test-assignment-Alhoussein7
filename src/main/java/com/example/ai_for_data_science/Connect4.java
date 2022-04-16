@@ -25,4 +25,8 @@ public class Connect4 {
     }
 
     public void play(Algorithm player1, Algorithm player2) {
-        int gameIsFinished =
+        int gameIsFinished = -1;
+        double movesP1 = 0;
+        double movesP2 = 0;
+
+        boolean 
