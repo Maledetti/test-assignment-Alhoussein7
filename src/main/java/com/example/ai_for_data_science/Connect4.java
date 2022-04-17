@@ -29,4 +29,8 @@ public class Connect4 {
         double movesP1 = 0;
         double movesP2 = 0;
 
-        boolean 
+        boolean isPlayerOne = true;
+        int moveCol;
+
+        do {
+            /* Alternate
