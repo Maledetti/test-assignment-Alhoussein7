@@ -33,4 +33,5 @@ public class Connect4 {
         int moveCol;
 
         do {
-            /* Alternate
+            /* Alternate player and get the move decided by the player */
+            if (isP
