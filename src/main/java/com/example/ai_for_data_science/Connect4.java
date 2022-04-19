@@ -34,4 +34,6 @@ public class Connect4 {
 
         do {
             /* Alternate player and get the move decided by the player */
-            if (isP
+            if (isPlayerOne) {
+                moveCol = player1.returnMove(gameBoard);
+     
