@@ -41,4 +41,6 @@ public class Connect4 {
             else {
                   moveCol = player2.returnMove(gameBoard);
                   movesP2++;
-    
+            }
+
+            if (validateMove(gameBoard, mov
