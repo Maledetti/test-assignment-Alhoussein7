@@ -39,4 +39,6 @@ public class Connect4 {
                 movesP1++;
             }
             else {
-                  moveC
+                  moveCol = player2.returnMove(gameBoard);
+                  movesP2++;
+    
