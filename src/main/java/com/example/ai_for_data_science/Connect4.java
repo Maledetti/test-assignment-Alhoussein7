@@ -43,4 +43,5 @@ public class Connect4 {
                   movesP2++;
             }
 
-            if (validateMove(gameBoard, mov
+            if (validateMove(gameBoard, moveCol)) {
+                performMove(moveCol, isPlayerOne)
