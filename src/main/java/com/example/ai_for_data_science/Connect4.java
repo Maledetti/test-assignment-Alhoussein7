@@ -44,4 +44,7 @@ public class Connect4 {
             }
 
             if (validateMove(gameBoard, moveCol)) {
-                performMove(moveCol, isPlayerOne)
+                performMove(moveCol, isPlayerOne);
+                moveOrder.add(moveCol);
+            }
+          
