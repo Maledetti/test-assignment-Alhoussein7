@@ -47,4 +47,6 @@ public class Connect4 {
                 performMove(moveCol, isPlayerOne);
                 moveOrder.add(moveCol);
             }
-          
+            else {
+                try {
+                    throw new Exception("I
