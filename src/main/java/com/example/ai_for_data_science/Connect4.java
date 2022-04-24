@@ -55,4 +55,6 @@ public class Connect4 {
                 }
             }
 
-     
+            isPlayerOne = !isPlayerOne;
+
+        } while ((gameIsFinished = gameIsFinish
