@@ -57,4 +57,6 @@ public class Connect4 {
 
             isPlayerOne = !isPlayerOne;
 
-        } while ((gameIsFinished = gameIsFinish
+        } while ((gameIsFinished = gameIsFinished(gameBoard)) == -1);
+
+        if (player1 instanceof BayesianClassifie
