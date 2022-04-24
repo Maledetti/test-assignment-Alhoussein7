@@ -50,4 +50,9 @@ public class Connect4 {
             else {
                 try {
                     throw new Exception("Invalid move was played!");
-                } catch (Exception
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+     
