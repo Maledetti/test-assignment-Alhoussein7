@@ -49,4 +49,5 @@ public class Connect4 {
             }
             else {
                 try {
-                    throw new Exception("I
+                    throw new Exception("Invalid move was played!");
+                } catch (Exception
