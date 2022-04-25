@@ -65,4 +65,5 @@ public class Connect4 {
 
         // The game has finished!
         System.out.println("Game is over! Result: " + gameIsFinished);
-        p
+        printGameBoard(gameBoard);
+        System.out.println("Move order: " + moveO
