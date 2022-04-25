@@ -60,4 +60,8 @@ public class Connect4 {
         } while ((gameIsFinished = gameIsFinished(gameBoard)) == -1);
 
         if (player1 instanceof BayesianClassifier && player2 instanceof Human){
-            scorePlayers(movesP1, mov
+            scorePlayers(movesP1, movesP2, !isPlayerOne);
+        }
+
+        // The game has finished!
+        System.
