@@ -64,4 +64,5 @@ public class Connect4 {
         }
 
         // The game has finished!
-        System.
+        System.out.println("Game is over! Result: " + gameIsFinished);
+        p
