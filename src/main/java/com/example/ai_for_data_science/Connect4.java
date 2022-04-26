@@ -69,4 +69,5 @@ public class Connect4 {
         System.out.println("Move order: " + moveOrder.toString());
     }
 
-    private void scorePlayers(double movesP1, double mo
+    private void scorePlayers(double movesP1, double movesP2, boolean isP1Winning) {
+        ScorePlayers sP = new 
