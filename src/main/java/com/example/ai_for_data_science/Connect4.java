@@ -72,4 +72,6 @@ public class Connect4 {
     private void scorePlayers(double movesP1, double movesP2, boolean isP1Winning) {
         ScorePlayers sP = new ScorePlayers();
         AlgorithmsWinningScores aS = new AlgorithmsWinningScores();
-        double[] bcScores = aS.getAlgScores("BayesianClassifier")
+        double[] bcScores = aS.getAlgScores("BayesianClassifier");
+        double[] hScores = aS.getAlgScores("Human");
+        double p1Speed =
