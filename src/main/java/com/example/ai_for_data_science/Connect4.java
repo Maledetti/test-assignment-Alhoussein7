@@ -74,4 +74,5 @@ public class Connect4 {
         AlgorithmsWinningScores aS = new AlgorithmsWinningScores();
         double[] bcScores = aS.getAlgScores("BayesianClassifier");
         double[] hScores = aS.getAlgScores("Human");
-        double p1Speed =
+        double p1Speed = (movesP1/21) + bcScores[1];
+        double p1WinScore = (2 * bcScores[0] + (is
