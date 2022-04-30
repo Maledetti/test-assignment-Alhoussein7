@@ -79,4 +79,6 @@ public class Connect4 {
         double p2Speed = (movesP2/21) + bcScores[1];
         double p2WinScore = (2 * hScores[0] + (isP1Winning ? 1 : -1))/2;
         aS.fillAlgoScores("BayesianClassifier", new double[]{p1WinScore, p1Speed});
-        aS.fillAlgoScores("Human", new double[]{p2WinScore, p2Spee
+        aS.fillAlgoScores("Human", new double[]{p2WinScore, p2Speed});
+        try {
+            sP.addNewRecord(new double[]{(p1Speed +p1WinSc
