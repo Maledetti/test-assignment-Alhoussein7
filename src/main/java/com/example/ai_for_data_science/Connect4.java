@@ -85,4 +85,7 @@ public class Connect4 {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    
+    }
+
+
+    public static void printGameBoard(int[] gameB
