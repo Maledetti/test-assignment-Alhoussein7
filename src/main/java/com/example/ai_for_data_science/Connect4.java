@@ -82,4 +82,7 @@ public class Connect4 {
         aS.fillAlgoScores("Human", new double[]{p2WinScore, p2Speed});
         try {
             sP.addNewRecord(new double[]{(p1Speed +p1WinScore)/2, (p2Speed +p2WinScore)/2}, (isP1Winning ? 1 : -1));
-        } catch 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    
