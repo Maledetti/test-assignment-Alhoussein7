@@ -88,4 +88,6 @@ public class Connect4 {
     }
 
 
-    public static void printGameBoard(int[] gameB
+    public static void printGameBoard(int[] gameBoard) {
+        System.out.println("____ gameBoard ____");
+       
