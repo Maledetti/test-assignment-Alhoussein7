@@ -91,4 +91,6 @@ public class Connect4 {
     public static void printGameBoard(int[] gameBoard) {
         System.out.println("____ gameBoard ____");
         for (int i = 0; i < 6; i++) {
-            for (int j = 0; j < 7; j+
+            for (int j = 0; j < 7; j++) {
+                System.out.print(gameBoard[j + i * 7] + "  ");
+    
