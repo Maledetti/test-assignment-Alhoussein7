@@ -96,4 +96,7 @@ public class Connect4 {
             }
             System.out.println("");
         }
-        System.out.println("____
+        System.out.println("___________________");
+    }
+
+    public static String gameBoa
