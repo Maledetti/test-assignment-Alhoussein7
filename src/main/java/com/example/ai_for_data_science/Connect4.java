@@ -99,4 +99,6 @@ public class Connect4 {
         System.out.println("___________________");
     }
 
-    public static String gameBoa
+    public static String gameBoardToString(int[] gameBoard) {
+        String representation = "";
+        for (int i =
