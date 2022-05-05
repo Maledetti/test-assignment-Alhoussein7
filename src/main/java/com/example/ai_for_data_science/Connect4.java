@@ -101,4 +101,6 @@ public class Connect4 {
 
     public static String gameBoardToString(int[] gameBoard) {
         String representation = "";
-        for (int i =
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 7; j++) {
+                repr
