@@ -106,4 +106,8 @@ public class Connect4 {
                 representation += (gameBoard[j + i * 7]);
             }
         }
-        return repr
+        return representation;
+    }
+
+
+    public static boolean validateMove(int[] gameBo
