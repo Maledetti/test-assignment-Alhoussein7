@@ -114,4 +114,5 @@ public class Connect4 {
         return  moveCol >= 0 && moveCol <= 6 && gameBoard[moveCol] == 0;
     }
 
-    private void performMove(int moveCol, b
+    private void performMove(int moveCol, boolean isPlayerOne) {
+        gameBoard = nextGameBoard(gameBoard, mo
