@@ -111,4 +111,7 @@ public class Connect4 {
 
 
     public static boolean validateMove(int[] gameBoard, int moveCol) {
-        return  moveCol >= 0 && moveCol <= 6 && gameBoa
+        return  moveCol >= 0 && moveCol <= 6 && gameBoard[moveCol] == 0;
+    }
+
+    private void performMove(int moveCol, b
