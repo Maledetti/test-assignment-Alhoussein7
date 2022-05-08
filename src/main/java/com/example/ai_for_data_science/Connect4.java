@@ -122,4 +122,5 @@ public class Connect4 {
     /**
      * Returns how the next gameBoard will look, after the inputted move has been made.
      * Used by the minimax-algorithm to analyze the game in greater depth
-     * @param gameB
+     * @param gameBoard The current gameBoard
+     * @param move
