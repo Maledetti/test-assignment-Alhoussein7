@@ -115,4 +115,9 @@ public class Connect4 {
     }
 
     private void performMove(int moveCol, boolean isPlayerOne) {
-        gameBoard = nextGameBoard(gameBoard, mo
+        gameBoard = nextGameBoard(gameBoard, moveCol, isPlayerOne);
+    }
+
+
+    /**
+     * Returns how t
