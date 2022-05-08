@@ -120,4 +120,5 @@ public class Connect4 {
 
 
     /**
-     * Returns how t
+     * Returns how the next gameBoard will look, after the inputted move has been made.
+     * Us
