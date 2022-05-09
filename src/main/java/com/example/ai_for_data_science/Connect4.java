@@ -124,4 +124,5 @@ public class Connect4 {
      * Used by the minimax-algorithm to analyze the game in greater depth
      * @param gameBoard The current gameBoard
      * @param moveCol The move to make
-     * @param isPlayerOne Whether th
+     * @param isPlayerOne Whether the move should be a 1 or 2
+     * @return The next gameBoard, after the move
