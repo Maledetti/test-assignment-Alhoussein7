@@ -127,4 +127,5 @@ public class Connect4 {
      * @param isPlayerOne Whether the move should be a 1 or 2
      * @return The next gameBoard, after the move has been made
      */
-    public static int[] nextGameBoard(int[] gameBoard, int
+    public static int[] nextGameBoard(int[] gameBoard, int moveCol, boolean isPlayerOne){
+        int[] nextGameBoard 
