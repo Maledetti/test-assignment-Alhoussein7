@@ -128,4 +128,6 @@ public class Connect4 {
      * @return The next gameBoard, after the move has been made
      */
     public static int[] nextGameBoard(int[] gameBoard, int moveCol, boolean isPlayerOne){
-        int[] nextGameBoard 
+        int[] nextGameBoard = Arrays.copyOf(gameBoard, gameBoard.length);
+
+        for (int i
