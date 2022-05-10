@@ -131,4 +131,5 @@ public class Connect4 {
         int[] nextGameBoard = Arrays.copyOf(gameBoard, gameBoard.length);
 
         for (int i = moveCol + 35; i >= moveCol; i -= 7) {
-            if (gameBoard[i] ==
+            if (gameBoard[i] == 0) {
+                nextGameBoard[i] = isPlayerOne ? 1 : 2;
