@@ -133,3 +133,6 @@ public class Connect4 {
         for (int i = moveCol + 35; i >= moveCol; i -= 7) {
             if (gameBoard[i] == 0) {
                 nextGameBoard[i] = isPlayerOne ? 1 : 2;
+                return nextGameBoard;
+            }
+        
