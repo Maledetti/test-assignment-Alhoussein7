@@ -135,4 +135,9 @@ public class Connect4 {
                 nextGameBoard[i] = isPlayerOne ? 1 : 2;
                 return nextGameBoard;
             }
-        
+        }
+        return null;
+    }
+
+    /**
+     * @return A list of valid
