@@ -140,4 +140,6 @@ public class Connect4 {
     }
 
     /**
-     * @return A list of valid
+     * @return A list of valid columns where the disc can be placed
+     */
+    public sta
