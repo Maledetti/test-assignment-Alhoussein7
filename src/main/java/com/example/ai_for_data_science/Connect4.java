@@ -142,4 +142,5 @@ public class Connect4 {
     /**
      * @return A list of valid columns where the disc can be placed
      */
-    public sta
+    public static ArrayList<Integer> getAvailableMoves(int[] gameBoard) {
+        
