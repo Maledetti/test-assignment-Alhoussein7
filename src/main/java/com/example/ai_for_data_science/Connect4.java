@@ -144,4 +144,6 @@ public class Connect4 {
      */
     public static ArrayList<Integer> getAvailableMoves(int[] gameBoard) {
         ArrayList<Integer> moves = new ArrayList<>();
-        for (int col = 0; co
+        for (int col = 0; col < 7; col++) {
+            if (gameBoard[col] == 0) moves.add(col);
+       
