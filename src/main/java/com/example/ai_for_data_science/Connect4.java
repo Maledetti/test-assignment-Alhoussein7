@@ -151,4 +151,5 @@ public class Connect4 {
     }
 
     /**
-     * Evaluates if any player has won 
+     * Evaluates if any player has won the game
+     * @param gameBoard The gameBoard that is eval
