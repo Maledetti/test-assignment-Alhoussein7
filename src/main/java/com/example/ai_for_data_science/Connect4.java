@@ -153,4 +153,6 @@ public class Connect4 {
     /**
      * Evaluates if any player has won the game
      * @param gameBoard The gameBoard that is evaluated
-     * @return -1: the game has _not_ been finished, 0: the game is a tie
+     * @return -1: the game has _not_ been finished, 0: the game is a tie, 1: player1 won, 2: player2 won
+     */
+    public static int gameIs
