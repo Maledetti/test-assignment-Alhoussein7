@@ -158,4 +158,5 @@ public class Connect4 {
     public static int gameIsFinished(int[] gameBoard){
 
         // Horizontal check
-        for (int row = 
+        for (int row = 0; row < 6; row++) {
+            for (int col = 0; col < 7-3; col+
