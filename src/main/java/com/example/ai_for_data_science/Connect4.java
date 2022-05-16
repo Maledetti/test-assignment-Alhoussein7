@@ -155,4 +155,7 @@ public class Connect4 {
      * @param gameBoard The gameBoard that is evaluated
      * @return -1: the game has _not_ been finished, 0: the game is a tie, 1: player1 won, 2: player2 won
      */
-    public static int gameIs
+    public static int gameIsFinished(int[] gameBoard){
+
+        // Horizontal check
+        for (int row = 
