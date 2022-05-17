@@ -161,4 +161,5 @@ public class Connect4 {
         for (int row = 0; row < 6; row++) {
             for (int col = 0; col < 7-3; col++) {
                 if (gameBoard[row * 7 + col] == 1 &&
-        
+                        gameBoard[row * 7 + col + 1] == 1 &&
+                       
