@@ -163,4 +163,5 @@ public class Connect4 {
                 if (gameBoard[row * 7 + col] == 1 &&
                         gameBoard[row * 7 + col + 1] == 1 &&
                         gameBoard[row * 7 + col + 2] == 1 &&
-                        gameB
+                        gameBoard[row * 7 + col + 3] == 1){
+                    return 1; // player 
