@@ -170,4 +170,9 @@ public class Connect4 {
                         gameBoard[row * 7 + col + 1] == 2 &&
                         gameBoard[row * 7 + col + 2] == 2 &&
                         gameBoard[row * 7 + col + 3] == 2){
-                    return 2; // player 2 has 4 horizo
+                    return 2; // player 2 has 4 horizontal discs in a row
+                }
+            }
+        }
+
+  
