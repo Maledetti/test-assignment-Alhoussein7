@@ -169,4 +169,5 @@ public class Connect4 {
                 if (gameBoard[row * 7 + col] == 2 &&
                         gameBoard[row * 7 + col + 1] == 2 &&
                         gameBoard[row * 7 + col + 2] == 2 &&
-                        gameBoard[row * 7 + col +
+                        gameBoard[row * 7 + col + 3] == 2){
+                    return 2; // player 2 has 4 horizo
