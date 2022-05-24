@@ -180,4 +180,6 @@ public class Connect4 {
             for (int row = 0; row < 6-3; row++) {
                 if (gameBoard[col + row * 7] == 1 &&
                         gameBoard[col + (row + 1) * 7] == 1 &&
-                        gameBoard[col + (row + 2) * 7] == 
+                        gameBoard[col + (row + 2) * 7] == 1 &&
+                        gameBoard[col + (row + 3) * 7] == 1){
+     
