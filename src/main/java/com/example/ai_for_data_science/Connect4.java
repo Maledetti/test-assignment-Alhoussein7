@@ -185,4 +185,4 @@ public class Connect4 {
                     return 1; // player 1 has 4 vertical discs in a row
                 }
                 if (gameBoard[col + row * 7] == 2 &&
-        
+                        gameBoard[col + (row + 1) * 7] == 2 
