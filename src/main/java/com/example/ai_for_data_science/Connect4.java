@@ -188,4 +188,9 @@ public class Connect4 {
                         gameBoard[col + (row + 1) * 7] == 2 &&
                         gameBoard[col + (row + 2) * 7] == 2 &&
                         gameBoard[col + (row + 3) * 7] == 2){
-                    return 2; // player 2 has 4 vertical discs in a r
+                    return 2; // player 2 has 4 vertical discs in a row
+                }
+            }
+        }
+
+        // diagonal (down
