@@ -193,4 +193,6 @@ public class Connect4 {
             }
         }
 
-        // diagonal (down
+        // diagonal (down + left) check
+        for (int col = 3; col < 7; col++){
+           
