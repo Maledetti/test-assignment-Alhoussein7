@@ -201,4 +201,6 @@ public class Connect4 {
                         gameBoard[col - 2 + (row + 2) * 7] == 1 &&
                         gameBoard[col - 3 + (row + 3) * 7] == 1){
                     return 1; // player 1 has 4 diagonal discs in a row
-               
+                }
+                if (gameBoard[col + row * 7] == 2 &&
+                  
