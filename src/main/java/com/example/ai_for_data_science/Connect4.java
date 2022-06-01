@@ -210,4 +210,5 @@ public class Connect4 {
                 }
             }
         }
- 
+        // diagonal (up + left) check
+        for (int col = 3; col < 
