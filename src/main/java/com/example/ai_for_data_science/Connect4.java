@@ -213,4 +213,5 @@ public class Connect4 {
         // diagonal (up + left) check
         for (int col = 3; col < 7; col++){
             for (int row = 3; row < 6; row++){
-                i
+                if (gameBoard[col + row * 7] == 1 &&
+                        gameBoard
