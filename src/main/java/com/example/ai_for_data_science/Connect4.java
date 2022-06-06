@@ -222,4 +222,5 @@ public class Connect4 {
                 if (gameBoard[col + row * 7] == 2 &&
                         gameBoard[col - 1 + (row - 1) * 7] == 2 &&
                         gameBoard[col - 2 + (row - 2) * 7] == 2 &&
-                      
+                        gameBoard[col - 3 + (row - 3) * 7] == 2){
+                    return 2; /
