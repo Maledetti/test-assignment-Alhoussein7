@@ -225,4 +225,8 @@ public class Connect4 {
                         gameBoard[col - 3 + (row - 3) * 7] == 2){
                     return 2; // player 2 has 4 diagonal discs in a row
                 }
-      
+            }
+        }
+
+        // not a tie check
+        for (int i = 0; i < 7; i++
