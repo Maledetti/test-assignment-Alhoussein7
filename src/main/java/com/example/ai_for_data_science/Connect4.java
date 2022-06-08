@@ -231,4 +231,8 @@ public class Connect4 {
         // not a tie check
         for (int i = 0; i < 7; i++) {
             if (gameBoard[i] == 0) { // found a tile where a disc can be placed => the game has _not_ been finished
-             
+                return -1;
+            }
+        }
+
+        return 0; // if no player has
