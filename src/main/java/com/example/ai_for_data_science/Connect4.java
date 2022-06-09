@@ -235,4 +235,4 @@ public class Connect4 {
             }
         }
 
-        return 0; // if no player has
+        return 0; // if no player has won, and no more tiles can be placed => game resulted in a tie
