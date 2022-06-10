@@ -59,3 +59,67 @@ public class DataSet {
      */
     public void generateTrainTestSets() {
         float trainDataRatio = 0.8f;
+        int trainDataLength = (int)(gameBoards.length * trainDataRatio);
+        int testDataLength = gameBoards.length - trainDataLength;
+
+        trainData_gameBoards = new int[trainDataLength][];
+        trainData_results = new int[trainDataLength];
+
+        testData_gameBoards = new int[testDataLength][];
+        testData_results = new int[testDataLength];
+
+        ArrayList<Integer> indexList = new ArrayList<>(gameBoards.length);
+
+        for (int i = 0; i < gameBoards.length; i++) {
+            indexList.add(i);
+        }
+        Collections.shuffle(indexList);
+
+        for (int i = 0; i < trainDataLength; i++) {
+            trainData_gameBoards[i] = gameBoards[(indexList.get(i))];
+            trainData_results[i] = results[(indexList.get(i))];
+        }
+        for (int i = trainDataLength; i < testDataLength + trainDataLength; i++) {
+            testData_gameBoards[i-trainDataLength] = gameBoards[(indexList.get(i))];
+            testData_results[i-trainDataLength] = results[(indexList.get(i))];
+        }
+    }
+
+    public void generateWinLoseTieSets() {
+        winning_gameBoards = new ArrayList<>();
+        losing_gameBoards = new ArrayList<>();
+        for (int i = 0; i < gameBoards.length; i++) {
+            if (results[i] == 1) {
+                winning_gameBoards.add(gameBoards[i]);
+            }
+            else if (results[i] == -1) {
+                losing_gameBoards.add(gameBoards[i]);
+            }
+        }
+    }
+
+    /**
+     * Used by minimax to collect and store data from played games.
+     * @param gameBoard The representation of the game board
+     * @param evalGameFinished The minimax evaluation of which player who's guaranteed to win
+     */
+    public static void collectData(int[] gameBoard, int evalGameFinished) throws IOException {
+        String gameBoardRepresentation = Connect4.gameBoardToString(gameBoard);
+
+        Scanner scanner = new Scanner(new File(".csv/gameData.csv"));
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            if (line.contains(gameBoardRepresentation + ",")) {
+                return;
+            }
+        }
+
+        BufferedWriter writer = new BufferedWriter(new FileWriter(".csv/gameData.csv", true));
+
+        if (evalGameFinished == 2) { evalGameFinished = -1; }
+
+        writer.write(String.format("%s,%s\n", Connect4.gameBoardToString(gameBoard), evalGameFinished));
+        writer.close();
+    }
+
+}
