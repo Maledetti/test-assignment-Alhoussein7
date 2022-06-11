@@ -15,4 +15,7 @@ public class Main {
 
     private static void run() {
 
-        DataSet dataSet = ne
+        DataSet dataSet = new DataSet();
+        try {
+            dataSet.preProcessing();
+   
