@@ -7,4 +7,8 @@ import com.example.ai_for_data_science.players.algorithms.svm.SVM;
 import java.io.FileNotFoundException;
 
 
-public c
+public class Main {
+
+    public static void main(String[] args) {
+        run();
+    
