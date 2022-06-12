@@ -24,4 +24,6 @@ public class Main {
         dataSet.generateTrainTestSets();
         dataSet.generateWinLoseTieSets();
 
-        //Algorithm player1 = new Human
+        //Algorithm player1 = new Human();
+        Algorithm player1 = new BayesianClassifier(dataSet, true);
+        //Al
