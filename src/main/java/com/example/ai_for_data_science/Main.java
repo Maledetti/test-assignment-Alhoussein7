@@ -19,4 +19,7 @@ public class Main {
         try {
             dataSet.preProcessing();
         } catch (FileNotFoundException e) {
-            e.printSt
+            e.printStackTrace();
+        }
+        dataSet.generateTrainTestSets();
+ 
