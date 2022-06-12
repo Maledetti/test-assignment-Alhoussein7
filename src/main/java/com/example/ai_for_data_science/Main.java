@@ -22,4 +22,6 @@ public class Main {
             e.printStackTrace();
         }
         dataSet.generateTrainTestSets();
- 
+        dataSet.generateWinLoseTieSets();
+
+        //Algorithm player1 = new Human
