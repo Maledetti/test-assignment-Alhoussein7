@@ -26,4 +26,5 @@ public class Main {
 
         //Algorithm player1 = new Human();
         Algorithm player1 = new BayesianClassifier(dataSet, true);
-        //Al
+        //Algorithm player2 = new LinearRegression(0.001f, 10000, 42, false, dataSet);
+    
