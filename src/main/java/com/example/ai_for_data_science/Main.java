@@ -30,4 +30,5 @@ public class Main {
         //Algorithm player2 = new BayesianClassifier(dataSet, false);
         //Algorithm player2 = new LinearRegression(0.001f, 10000, 42, false, dataSet);
 
-        //Algorithm player
+        //Algorithm player1 = new Minimax(true, 15);
+        //Algorithm player2 = new Minimax(f
