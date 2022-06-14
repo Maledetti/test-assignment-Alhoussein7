@@ -31,4 +31,7 @@ public class Main {
         //Algorithm player2 = new LinearRegression(0.001f, 10000, 42, false, dataSet);
 
         //Algorithm player1 = new Minimax(true, 15);
-        //Algorithm player2 = new Minimax(f
+        //Algorithm player2 = new Minimax(false, 1);
+
+        Algorithm player2 = new Human();
+        //Algorithm playe
