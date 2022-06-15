@@ -37,4 +37,6 @@ public class Main {
         //Algorithm player2 = new RandomMove();
 
         //SVM is instantiated only for bayesianClassifier vs human
-        SVM svm = player1 instanceof BayesianClassifier &
+        SVM svm = player1 instanceof BayesianClassifier && player2 instanceof Human ? new SVM() : null;
+
+        Syste
