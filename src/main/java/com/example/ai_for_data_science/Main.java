@@ -34,4 +34,6 @@ public class Main {
         //Algorithm player2 = new Minimax(false, 1);
 
         Algorithm player2 = new Human();
-        //Algorithm playe
+        //Algorithm player2 = new RandomMove();
+
+        //SVM is instantiated only for bayesianClassifier v
