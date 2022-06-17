@@ -39,4 +39,6 @@ public class Main {
         //SVM is instantiated only for bayesianClassifier vs human
         SVM svm = player1 instanceof BayesianClassifier && player2 instanceof Human ? new SVM() : null;
 
-        System.out.println(player1.getClass().getSimpleName() + " vs " + player2
+        System.out.println(player1.getClass().getSimpleName() + " vs " + player2.getClass().getSimpleName());
+
+        Connect4 c4 = ne
