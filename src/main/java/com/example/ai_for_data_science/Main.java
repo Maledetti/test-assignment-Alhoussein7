@@ -41,4 +41,8 @@ public class Main {
 
         System.out.println(player1.getClass().getSimpleName() + " vs " + player2.getClass().getSimpleName());
 
-        Connect4 c4 = ne
+        Connect4 c4 = new Connect4();
+
+        System.out.println("\n");
+
+        for (int i = 0;
