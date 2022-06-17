@@ -47,4 +47,8 @@ public class Main {
 
         for (int i = 0; i < 1; i++) {
             c4.play(player1, player2);
-            c4.r
+            c4.reset();
+        }
+
+        player1.printResults();
+        //playe
