@@ -45,4 +45,6 @@ public class Main {
 
         System.out.println("\n");
 
-        for (int i = 0;
+        for (int i = 0; i < 1; i++) {
+            c4.play(player1, player2);
+            c4.r
