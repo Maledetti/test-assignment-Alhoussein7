@@ -51,4 +51,7 @@ public class Main {
         }
 
         player1.printResults();
-        //playe
+        //player2.printResults();
+
+    }
+}
