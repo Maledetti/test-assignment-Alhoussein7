@@ -139,3 +139,5 @@ public class BayesianClassifier implements Algorithm {
 
     public void setSpeedWinningRate(double speedWinningRate) {
         this.speedWinningRate = speedWinningRate;
+    }
+}
