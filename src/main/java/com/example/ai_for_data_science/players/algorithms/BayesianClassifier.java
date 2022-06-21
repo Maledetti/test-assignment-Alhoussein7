@@ -93,3 +93,49 @@ public class BayesianClassifier implements Algorithm {
 
         for (int i = 0; i < categoryWinCounts.length; i++) {
             likelyhoodWin *= (float)(categoryWinCounts[i] + 1) / totalWins;   // +1 acts as a bias
+        }
+        for (int i = 0; i < categoryLoseCounts.length; i++) {
+            likelyhoodLose *= (float)(categoryLoseCounts[i] + 1) / totalLosses;   // +1 acts as a bias
+        }
+
+        float likelyhoodEvidence = likelyhoodWin + likelyhoodLose;
+        return new float[] { likelyhoodWin / likelyhoodEvidence, likelyhoodLose / likelyhoodEvidence };   //The probabilities that this gameBoard results in a win[0] and lose[1]
+    }
+
+
+    private float calculateAccuracy() {
+
+        int correctClassifications = 0;
+        int totalClassifications = dataSet.gameBoards.length / 100;
+
+        System.out.print("  Evaluating " + totalClassifications + " entries...  ");
+        for (int i = 0; i < totalClassifications; i++) {
+            if (i % 100 == 0)
+                System.out.print((double)Math.round((float)i/totalClassifications*10000)/100 + "%  ");
+
+            float[] predictions = predict(dataSet.gameBoards[i]);
+
+            int predictedClassification = predictions[0] > predictions[1] ? 1 : -1;
+
+            if (predictedClassification == dataSet.results[i]) {
+                correctClassifications++;
+            }
+        }
+
+        return (float)correctClassifications / totalClassifications;
+    }
+
+    public double getWinningRate() {
+        return winningRate;
+    }
+
+    public void setWinningRate(double winningRate) {
+        this.winningRate = winningRate;
+    }
+
+    public double getSpeedWinningRate() {
+        return speedWinningRate;
+    }
+
+    public void setSpeedWinningRate(double speedWinningRate) {
+        this.speedWinningRate = speedWinningRate;
