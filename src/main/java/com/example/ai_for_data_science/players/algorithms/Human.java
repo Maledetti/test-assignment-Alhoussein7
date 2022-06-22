@@ -7,4 +7,8 @@ import java.util.Scanner;
 
 public class Human implements Algorithm {
 
-    double winn
+    double winningRate = 0;
+    double speedWinningRate = 0;
+
+    @Override
+    public in
