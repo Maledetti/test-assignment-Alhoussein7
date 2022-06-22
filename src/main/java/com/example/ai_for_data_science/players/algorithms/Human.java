@@ -5,4 +5,6 @@ import com.example.ai_for_data_science.Connect4;
 
 import java.util.Scanner;
 
-p
+public class Human implements Algorithm {
+
+    double winn
