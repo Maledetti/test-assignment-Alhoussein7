@@ -18,4 +18,5 @@ public class Human implements Algorithm {
 
         while (true) {
 
-            Connec
+            Connect4.printGameBoard(gameBoard);
+            System.out.println(
