@@ -11,4 +11,6 @@ public class Human implements Algorithm {
     double speedWinningRate = 0;
 
     @Override
-    public in
+    public int returnMove(int[] gameBoard) {
+
+        Scanner sc = n
