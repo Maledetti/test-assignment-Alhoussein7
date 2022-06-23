@@ -13,4 +13,9 @@ public class Human implements Algorithm {
     @Override
     public int returnMove(int[] gameBoard) {
 
-        Scanner sc = n
+        Scanner sc = new Scanner(System.in);
+        int moveCol;
+
+        while (true) {
+
+            Connec
