@@ -19,4 +19,5 @@ public class Human implements Algorithm {
         while (true) {
 
             Connect4.printGameBoard(gameBoard);
-            System.out.println(
+            System.out.println("\nSelect column to play  ([0, 6])");
+            System.out.prin
