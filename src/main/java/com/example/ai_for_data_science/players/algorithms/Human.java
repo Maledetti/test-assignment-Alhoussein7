@@ -23,4 +23,7 @@ public class Human implements Algorithm {
             System.out.print(">> ");
 
             try {
-                moveCol = sc.ne
+                moveCol = sc.nextInt();
+            }
+            catch (Exception e) {
+            
