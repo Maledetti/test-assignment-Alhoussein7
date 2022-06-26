@@ -20,4 +20,7 @@ public class Human implements Algorithm {
 
             Connect4.printGameBoard(gameBoard);
             System.out.println("\nSelect column to play  ([0, 6])");
-            System.out.prin
+            System.out.print(">> ");
+
+            try {
+                moveCol = sc.ne
