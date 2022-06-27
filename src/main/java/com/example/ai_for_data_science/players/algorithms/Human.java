@@ -27,4 +27,8 @@ public class Human implements Algorithm {
             }
             catch (Exception e) {
                 System.out.println("\u001B[31m" + "INVALID MOVE!" + "\u001B[0m");
-           
+                sc.nextLine();
+                continue;
+            }
+
+            if
