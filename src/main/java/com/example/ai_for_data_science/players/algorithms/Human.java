@@ -31,4 +31,5 @@ public class Human implements Algorithm {
                 continue;
             }
 
-            if
+            if (Connect4.validateMove(gameBoard, moveCol)) {
+           
