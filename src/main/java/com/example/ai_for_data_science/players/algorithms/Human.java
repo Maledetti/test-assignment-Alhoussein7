@@ -32,4 +32,7 @@ public class Human implements Algorithm {
             }
 
             if (Connect4.validateMove(gameBoard, moveCol)) {
-           
+                break;
+            }
+            else {
+                System.out.
