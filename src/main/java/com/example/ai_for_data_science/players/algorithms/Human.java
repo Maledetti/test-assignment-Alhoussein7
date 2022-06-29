@@ -43,4 +43,9 @@ public class Human implements Algorithm {
     }
 
 
-    @Over
+    @Override
+    public void printResults() {
+
+    }
+
+    public double getWinnin
