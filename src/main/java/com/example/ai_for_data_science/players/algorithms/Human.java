@@ -48,4 +48,8 @@ public class Human implements Algorithm {
 
     }
 
-    public double getWinnin
+    public double getWinningRate() {
+        return winningRate;
+    }
+
+    public void setWinningRat
