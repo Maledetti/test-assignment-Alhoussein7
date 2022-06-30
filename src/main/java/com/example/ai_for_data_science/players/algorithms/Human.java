@@ -52,4 +52,8 @@ public class Human implements Algorithm {
         return winningRate;
     }
 
-    public void setWinningRat
+    public void setWinningRate(double winningRate) {
+        this.winningRate = winningRate;
+    }
+
+   
