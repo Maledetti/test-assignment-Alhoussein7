@@ -60,4 +60,5 @@ public class Human implements Algorithm {
         return speedWinningRate;
     }
 
-    public void setSpeedWinningRate(double speedWi
+    public void setSpeedWinningRate(double speedWinningRate) {
+        this.speedWinningRate = speedWinningRate;
