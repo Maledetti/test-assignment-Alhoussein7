@@ -56,4 +56,5 @@ public class Human implements Algorithm {
         this.winningRate = winningRate;
     }
 
-   
+    public double getSpeedWinningRate() {
+        return speedWinningRa
