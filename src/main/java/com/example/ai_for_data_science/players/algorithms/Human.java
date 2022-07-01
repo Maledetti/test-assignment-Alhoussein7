@@ -62,3 +62,5 @@ public class Human implements Algorithm {
 
     public void setSpeedWinningRate(double speedWinningRate) {
         this.speedWinningRate = speedWinningRate;
+    }
+}
