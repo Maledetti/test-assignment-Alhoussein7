@@ -57,4 +57,7 @@ public class Human implements Algorithm {
     }
 
     public double getSpeedWinningRate() {
-        return speedWinningRa
+        return speedWinningRate;
+    }
+
+    public void setSpeedWinningRate(double speedWi
