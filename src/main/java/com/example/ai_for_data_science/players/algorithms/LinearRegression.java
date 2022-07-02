@@ -193,3 +193,69 @@ public class LinearRegression implements Algorithm {
                     artificialGameBoard_s += "0,";
                 }
             }
+
+            writer.write(String.format("%s%s\n", artificialGameBoard_s, winRate));
+        }
+        writer.close();
+    }
+
+
+    private float[] predict() {
+        int n = independentFeatures.length;
+        int m = independentFeatures[0].length;
+        float[] sums = new float[n];
+
+        for (int i = 0; i < n; i++) {
+            sums[i] = bias;
+            for (int j = 0; j < m; j++) {
+                sums[i] += independentFeatures[i][j] * weights[j];
+            }
+        }
+        return sums;
+    }
+    private float predict(float[] independentFeature) {
+        float sum = bias;
+        for (int j = 0; j < independentFeature.length; j++) {
+            sum += independentFeature[j] * weights[j];
+        }
+        return sum;
+    }
+
+    private float mseCost() {
+        float[] squareErrors = pow(subtract(predict(), dependentFeature), 2);
+        return sum(divide(squareErrors, (2 * dependentFeature.length)));
+    }
+
+    private float rSquared() {
+        float residual_sum_of_squares = 0.0f;
+        float total_sum_of_squares = 0.0f;
+
+        float[] predictions = predict();
+        float mean = sum(dependentFeature) / dependentFeature.length;
+
+        residual_sum_of_squares = sum(pow(subtract(predictions, dependentFeature), 2));
+        total_sum_of_squares =    sum(pow(subtract(predictions, mean),             2));
+
+        return 1 - residual_sum_of_squares / total_sum_of_squares;
+    }
+
+    private void updateWeights() {
+        int[] randomIndices = new int[batchSize];
+        float[] predictions = new float[batchSize];
+
+        ArrayList<Integer> indicesSampleSpace = new ArrayList<Integer>(independentFeatures.length);
+        for(int i = 0; i < independentFeatures.length; i++) {
+            indicesSampleSpace.add(i);
+        }
+        Random r = new Random();
+
+        for (int i = 0; i < batchSize; i++) {
+            randomIndices[i] = indicesSampleSpace.get(r.nextInt(indicesSampleSpace.size()));
+            indicesSampleSpace.remove((Integer)randomIndices[i]);
+            predictions[i] = predict(independentFeatures[randomIndices[i]]);
+        }
+
+        float[] d_dependentFeatures = new float[weights.length];
+        float d_bias = 0.0f;
+
+        for (int i = 0; i < batchSize; i++) {
