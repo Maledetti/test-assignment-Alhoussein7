@@ -59,3 +59,66 @@ public class LinearRegression implements Algorithm {
 
         this.independentFeatures = independentFeatures;
         this.dependentFeature = dependentFeature;
+        this.weights = weights;
+        this.bias = 0.0f;
+        this.learningRate = learningRate;
+        this.iterations = iterations;
+        this.batchSize = batchSize;
+
+        this.isPlayerOne = isPlayerOne;
+
+        this.dataSet = dataSet;
+
+        train();
+    }
+
+    private final float[][] independentFeatures;
+    private final float[] dependentFeature;
+    private float[] weights;
+    private float bias;
+
+    private final float learningRate;
+    private final int iterations;
+    private final int batchSize;
+
+    public float[] getWeights() {
+        return weights;
+    }
+    public float getBias() {
+        return bias;
+    }
+
+    private boolean isPlayerOne;
+
+    private DataSet dataSet;
+
+    @Override
+    public int returnMove(int[] gameBoard) {
+
+        float bestPredictedWinRate = 0;
+        int bestMoveCol = 0;
+
+        for (int m : Connect4.getAvailableMoves(gameBoard)) {
+
+            int[] nextGameBoard = Connect4.nextGameBoard(gameBoard, m, isPlayerOne);
+            float[] nextGameBoard_f = new float[nextGameBoard.length];
+            for (int i = 0 ; i < nextGameBoard.length; i++) {
+                nextGameBoard_f[i] = (float)nextGameBoard[i];
+            }
+
+            float predictedWinRate = predict(nextGameBoard_f);
+
+            if (predictedWinRate > bestPredictedWinRate) {
+                bestPredictedWinRate = predictedWinRate;
+                bestMoveCol = m;
+            }
+        }
+
+        return bestMoveCol;
+    }
+
+    @Override
+    public void printResults() {
+        System.out.println("Linear Regression - Results:");
+        System.out.println("  Weights: " + Arrays.toString(weights));
+        System.out.println("  Bias: " + bias);
