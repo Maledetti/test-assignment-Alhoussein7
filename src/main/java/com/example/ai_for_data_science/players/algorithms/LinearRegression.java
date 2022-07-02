@@ -259,3 +259,76 @@ public class LinearRegression implements Algorithm {
         float d_bias = 0.0f;
 
         for (int i = 0; i < batchSize; i++) {
+            d_dependentFeatures = subtract(d_dependentFeatures, multiply(independentFeatures[randomIndices[i]], dependentFeature[randomIndices[i]] - predictions[i]));
+            d_bias -= dependentFeature[randomIndices[i]] - predictions[i];
+        }
+
+        weights = subtract(weights, multiply(d_dependentFeatures, learningRate));
+        bias -= d_bias * learningRate;
+    }
+
+    public void train() {
+        for (int i = 0; i < iterations; i++) {
+            updateWeights();
+        }
+    }
+
+
+    private float calculateAccuracy() {
+
+        int correctClassifications = 0;
+        int totalClassifications = dataSet.gameBoards.length;
+
+        //System.out.print("  Evaluating " + totalClassifications + " entries...  ");
+        for (int i = 0; i < totalClassifications; i++) {
+            //if (i % 100 == 0)
+                //System.out.print((double)Math.round((float)i/totalClassifications*10000)/100 + "%  ");
+
+            float[] nextGameBoard_f = new float[dataSet.gameBoards[i].length];
+            for (int j = 0 ; j < dataSet.gameBoards[i].length; j++) {
+                nextGameBoard_f[j] = (float)dataSet.gameBoards[i][j];
+            }
+
+            float predictedWinRate = predict(nextGameBoard_f);
+            int prediction = (predictedWinRate > 0.5f) ? 1 : -1;
+
+            if (prediction == dataSet.results[i]) {
+                correctClassifications++;
+            }
+        }
+
+        return (float)correctClassifications / totalClassifications;
+    }
+
+
+    private float[] subtract(float[] arr1, float[] arr2) {
+        int n = arr1.length;
+        float[] result = new float[n];
+        for (int i = 0; i < n; i++) {
+            result[i] = arr1[i] - arr2[i];
+        }
+        return result;
+    }
+
+    private float[] subtract(float[] arr1, float a) {
+        int n = arr1.length;
+        float[] result = new float[n];
+        for (int i = 0; i < n; i++) {
+            result[i] = arr1[i] - a;
+        }
+        return result;
+    }
+
+    private float[] pow(float[] arr1, float exponent) {
+        int n = arr1.length;
+        float[] result = new float[n];
+        for (int i = 0; i < n; i++) {
+            result[i] = (float)Math.pow(arr1[i], exponent);
+        }
+        return result;
+    }
+
+    private float[] multiply(float[] arr1, float a) {
+        int n = arr1.length;
+        float[] result = new float[n];
+        for (int i = 0; i < n; i++) {
