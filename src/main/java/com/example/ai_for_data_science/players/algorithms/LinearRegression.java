@@ -332,3 +332,41 @@ public class LinearRegression implements Algorithm {
         int n = arr1.length;
         float[] result = new float[n];
         for (int i = 0; i < n; i++) {
+            result[i] = arr1[i] * a;
+        }
+        return result;
+    }
+
+    private float[] divide(float[] arr1, float a) {
+        int n = arr1.length;
+        float[] result = new float[n];
+        for (int i = 0; i < n; i++) {
+            result[i] = arr1[i] / a;
+        }
+        return result;
+    }
+
+    private float sum(float[] arr1) {
+        float sum = 0.0f;
+        for (int i = 0; i < arr1.length; i++) {
+            sum += arr1[i];
+        }
+        return sum;
+    }
+
+    public double getWinningRate() {
+        return winningRate;
+    }
+
+    public void setWinningRate(double winningRate) {
+        this.winningRate = winningRate;
+    }
+
+    public double getSpeedWinningRate() {
+        return speedWinningRate;
+    }
+
+    public void setSpeedWinningRate(double speedWinningRate) {
+        this.speedWinningRate = speedWinningRate;
+    }
+}
