@@ -9,4 +9,4 @@ public class Minimax implements Algorithm {
     double winningRate = 0;
     double speedWinningRate = 0;
 
-    int depth;
+    int depth; // -1 means infinite depth (this implementation is too slow for tha
