@@ -6,4 +6,7 @@ import com.example.ai_for_data_science.DataSet;
 
 public class Minimax implements Algorithm {
 
-    dou
+    double winningRate = 0;
+    double speedWinningRate = 0;
+
+    int depth;
