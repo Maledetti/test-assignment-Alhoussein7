@@ -13,4 +13,8 @@ public class Minimax implements Algorithm {
     int nodesExamined = 0;
     int branchesPruned = 0;
 
-    b
+    boolean isPlayerOne;
+
+    long startTime;
+    long timeElapsed;
+ 
