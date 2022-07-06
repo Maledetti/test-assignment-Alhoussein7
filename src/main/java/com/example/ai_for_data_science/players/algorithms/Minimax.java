@@ -17,4 +17,8 @@ public class Minimax implements Algorithm {
 
     long startTime;
     long timeElapsed;
- 
+    int movesMade;
+
+    boolean collectData = false;
+
+//        0 
