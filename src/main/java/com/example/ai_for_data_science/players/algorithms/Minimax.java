@@ -30,4 +30,6 @@ public class Minimax implements Algorithm {
 
     public Minimax(boolean isPlayerOne, int depth) {
         this.isPlayerOne = isPlayerOne;
-    
+        nodesExamined = 0;
+        branchesPruned = 0;
+      
