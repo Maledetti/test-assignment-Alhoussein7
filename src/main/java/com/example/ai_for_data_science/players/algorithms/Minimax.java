@@ -35,4 +35,9 @@ public class Minimax implements Algorithm {
         timeElapsed = 0;
         movesMade = 0;
 
-        this.depth = dept
+        this.depth = depth;
+    }
+
+
+    @Override
+    public int returnMove(int[] gameBoard) {
