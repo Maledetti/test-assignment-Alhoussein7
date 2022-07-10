@@ -32,4 +32,7 @@ public class Minimax implements Algorithm {
         this.isPlayerOne = isPlayerOne;
         nodesExamined = 0;
         branchesPruned = 0;
-      
+        timeElapsed = 0;
+        movesMade = 0;
+
+        this.depth = dept
