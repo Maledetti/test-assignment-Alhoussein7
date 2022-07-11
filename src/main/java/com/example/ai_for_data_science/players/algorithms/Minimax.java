@@ -41,3 +41,7 @@ public class Minimax implements Algorithm {
 
     @Override
     public int returnMove(int[] gameBoard) {
+
+        int bestEval = Integer.MIN_VALUE; // - 2^31 - 1.
+
+        startTime 
