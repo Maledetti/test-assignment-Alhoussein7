@@ -44,4 +44,8 @@ public class Minimax implements Algorithm {
 
         int bestEval = Integer.MIN_VALUE; // - 2^31 - 1.
 
-        startTime 
+        startTime = System.currentTimeMillis();
+
+        int bestMove = -1;
+
+        for (int c
