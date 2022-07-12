@@ -50,4 +50,4 @@ public class Minimax implements Algorithm {
 
         for (int col : Connect4.getAvailableMoves(gameBoard))
         {
-            int moveEv
+            int moveEval = minimax(Connect4.nextGameBoard(gameBoard, col, isPlayerOne), 
