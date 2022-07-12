@@ -48,4 +48,6 @@ public class Minimax implements Algorithm {
 
         int bestMove = -1;
 
-        for (int c
+        for (int col : Connect4.getAvailableMoves(gameBoard))
+        {
+            int moveEv
