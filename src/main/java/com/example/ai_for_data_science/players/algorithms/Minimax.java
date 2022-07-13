@@ -54,4 +54,8 @@ public class Minimax implements Algorithm {
 
             if (moveEval > bestEval) {
                 bestMove = col;
-                bestEval
+                bestEval = moveEval;
+            }
+        }
+
+        timeElapsed += System.cur
