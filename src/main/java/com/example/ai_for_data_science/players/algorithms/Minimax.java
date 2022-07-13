@@ -61,4 +61,8 @@ public class Minimax implements Algorithm {
         timeElapsed += System.currentTimeMillis() - startTime;
         ++movesMade;
 
-        return best
+        return bestMove;
+    }
+
+    @Override
+    public void printResults() {
