@@ -67,4 +67,6 @@ public class Minimax implements Algorithm {
     @Override
     public void printResults() {
         if (isPlayerOne) {
-            System.out.println("\nMinimax results:"
+            System.out.println("\nMinimax results:");
+            System.out.println("  Depth: " + depth);
+     
