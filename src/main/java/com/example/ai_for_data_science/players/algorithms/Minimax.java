@@ -69,4 +69,4 @@ public class Minimax implements Algorithm {
         if (isPlayerOne) {
             System.out.println("\nMinimax results:");
             System.out.println("  Depth: " + depth);
-     
+            System.out.println("  Time elapsed: " + timeElapsed + " (
