@@ -71,4 +71,4 @@ public class Minimax implements Algorithm {
             System.out.println("  Depth: " + depth);
             System.out.println("  Time elapsed: " + timeElapsed + " (ms)");
             System.out.println("  Moves made: " + movesMade);
-   
+            System.out.println("  Avg. time per move: " + Math.round((flo
