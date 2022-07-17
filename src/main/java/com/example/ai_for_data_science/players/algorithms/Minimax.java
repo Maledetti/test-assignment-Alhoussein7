@@ -77,4 +77,6 @@ public class Minimax implements Algorithm {
         }
     }
 
-    private int minimax(int[
+    private int minimax(int[] gameBoard, int depth, int alpha, int beta, boolean maximizingPlayer){
+
+  
