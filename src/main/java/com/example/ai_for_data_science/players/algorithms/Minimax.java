@@ -82,4 +82,5 @@ public class Minimax implements Algorithm {
         ++nodesExamined;
         int evalGameFinished;
 
-        if (depth == 0)     // if the maximum depth was hit => evaluate the positi
+        if (depth == 0)     // if the maximum depth was hit => evaluate the position to find the next best move
+            return evalGame(gameB
