@@ -82,4 +82,4 @@ public class Minimax implements Algorithm {
         ++nodesExamined;
         int evalGameFinished;
 
-        if (d
+        if (depth == 0)     // if the maximum depth was hit => evaluate the positi
