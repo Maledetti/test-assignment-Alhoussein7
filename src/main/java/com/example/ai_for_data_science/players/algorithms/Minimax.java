@@ -85,4 +85,7 @@ public class Minimax implements Algorithm {
         if (depth == 0)     // if the maximum depth was hit => evaluate the position to find the next best move
             return evalGame(gameBoard);
 
-        if ((evalGameFinished = Connect4.gameIsFinished(gameBoard)) > -1) {     // if the game finished => evaluate the position 
+        if ((evalGameFinished = Connect4.gameIsFinished(gameBoard)) > -1) {     // if the game finished => evaluate the position to find the next best move
+
+            if (collectData) {
+           
