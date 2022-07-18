@@ -88,4 +88,5 @@ public class Minimax implements Algorithm {
         if ((evalGameFinished = Connect4.gameIsFinished(gameBoard)) > -1) {     // if the game finished => evaluate the position to find the next best move
 
             if (collectData) {
-           
+                try {
+                    DataSet.collectData(gameBoard, evalGameFi
