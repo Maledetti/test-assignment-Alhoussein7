@@ -89,4 +89,6 @@ public class Minimax implements Algorithm {
 
             if (collectData) {
                 try {
-                    DataSet.collectData(gameBoard, evalGameFi
+                    DataSet.collectData(gameBoard, evalGameFinished);
+                } catch (Exception e) {
+                    e.printStackTrace();
