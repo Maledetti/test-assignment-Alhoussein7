@@ -95,4 +95,7 @@ public class Minimax implements Algorithm {
                 }
             }
 
-            return evalGameFinished(
+            return evalGameFinished(gameBoard, evalGameFinished, depth);
+        }
+
+        if (maximizingP
