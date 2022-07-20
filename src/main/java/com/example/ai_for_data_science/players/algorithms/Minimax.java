@@ -98,4 +98,7 @@ public class Minimax implements Algorithm {
             return evalGameFinished(gameBoard, evalGameFinished, depth);
         }
 
-        if (maximizingP
+        if (maximizingPlayer) {
+            int maxEval = Integer.MIN_VALUE;
+
+            fo
