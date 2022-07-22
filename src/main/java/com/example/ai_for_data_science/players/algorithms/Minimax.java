@@ -103,4 +103,6 @@ public class Minimax implements Algorithm {
 
             for (int col : Connect4.getAvailableMoves(gameBoard)) {
                 int moveEval = minimax(Connect4.nextGameBoard(gameBoard, col, isPlayerOne), depth-1, alpha, beta, false);
-                ma
+                maxEval = Math.max(maxEval, moveEval);
+
+                alph
