@@ -109,4 +109,10 @@ public class Minimax implements Algorithm {
                 if (beta <= alpha)
                 {
                     ++branchesPruned;
-                    b
+                    break;
+                }
+            }
+
+            return maxEval;
+        }
+    
