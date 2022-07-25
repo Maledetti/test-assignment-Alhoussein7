@@ -119,4 +119,5 @@ public class Minimax implements Algorithm {
         {
             int minEval = Integer.MAX_VALUE;
 
-         
+            for (int col: Connect4.getAvailableMoves(gameBoard)) {
+              
