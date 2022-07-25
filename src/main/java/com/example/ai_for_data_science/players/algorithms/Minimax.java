@@ -115,4 +115,8 @@ public class Minimax implements Algorithm {
 
             return maxEval;
         }
-    
+        else
+        {
+            int minEval = Integer.MAX_VALUE;
+
+         
