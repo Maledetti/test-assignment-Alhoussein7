@@ -124,4 +124,6 @@ public class Minimax implements Algorithm {
                 minEval = Math.min(minEval, moveEval);
 
                 beta = Math.min(beta, minEval);
-                if (beta
+                if (beta <= alpha)
+                {
+                    ++branch
