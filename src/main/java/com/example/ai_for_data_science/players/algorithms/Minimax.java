@@ -126,4 +126,7 @@ public class Minimax implements Algorithm {
                 beta = Math.min(beta, minEval);
                 if (beta <= alpha)
                 {
-                    ++branch
+                    ++branchesPruned;
+                    break;
+                }
+          
