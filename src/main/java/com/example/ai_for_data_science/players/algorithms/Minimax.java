@@ -129,4 +129,11 @@ public class Minimax implements Algorithm {
                     ++branchesPruned;
                     break;
                 }
-          
+            }
+
+            return minEval;
+        }
+    }
+
+    /**
+     * Evaluates how g
