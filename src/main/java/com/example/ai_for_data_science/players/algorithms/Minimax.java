@@ -136,4 +136,4 @@ public class Minimax implements Algorithm {
     }
 
     /**
-     * Evaluates how g
+     * Evaluates how good a won/tied position is based on who's turn it is and who w
