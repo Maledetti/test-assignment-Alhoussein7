@@ -136,4 +136,5 @@ public class Minimax implements Algorithm {
     }
 
     /**
-     * Evaluates how good a won/tied position is based on who's turn it is and who w
+     * Evaluates how good a won/tied position is based on who's turn it is and who won
+     * The depth ensures that winning faster and losing slower is
