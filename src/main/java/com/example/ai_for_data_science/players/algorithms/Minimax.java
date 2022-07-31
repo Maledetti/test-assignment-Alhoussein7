@@ -140,4 +140,5 @@ public class Minimax implements Algorithm {
      * The depth ensures that winning faster and losing slower is considered better
      */
     private int evalGameFinished(int[] gameBoard, int evalGameFinished, int depth) {   // (me)p1 loses in the next move
-        if ((evalGameFinished == 2 && isPlayerOne) || (e
+        if ((evalGameFinished == 2 && isPlayerOne) || (evalGameFinished == 1 && !isPlayerOne)) {
+            return -100000 - depth
