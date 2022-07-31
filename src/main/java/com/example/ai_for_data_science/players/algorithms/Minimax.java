@@ -139,4 +139,5 @@ public class Minimax implements Algorithm {
      * Evaluates how good a won/tied position is based on who's turn it is and who won
      * The depth ensures that winning faster and losing slower is considered better
      */
-    private int evalGameFinished(int[] gameBoard, int evalGameFinished, int depth) {   // (me)p1 loses 
+    private int evalGameFinished(int[] gameBoard, int evalGameFinished, int depth) {   // (me)p1 loses in the next move
+        if ((evalGameFinished == 2 && isPlayerOne) || (e
