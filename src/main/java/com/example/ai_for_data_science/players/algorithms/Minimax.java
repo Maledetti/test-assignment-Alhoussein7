@@ -141,4 +141,6 @@ public class Minimax implements Algorithm {
      */
     private int evalGameFinished(int[] gameBoard, int evalGameFinished, int depth) {   // (me)p1 loses in the next move
         if ((evalGameFinished == 2 && isPlayerOne) || (evalGameFinished == 1 && !isPlayerOne)) {
-            return -100000 - depth; // minimax loses -> not a good situation -> return a huge negative 
+            return -100000 - depth; // minimax loses -> not a good situation -> return a huge negative value
+        }
+        else if ((evalGameFinished == 1) || (evalGam
