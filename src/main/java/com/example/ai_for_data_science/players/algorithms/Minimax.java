@@ -146,4 +146,5 @@ public class Minimax implements Algorithm {
         else if ((evalGameFinished == 1) || (evalGameFinished == 2)){
             return 100000 + depth; // minimax wins -> a good situation -> return a huge positive value
         }
-        
+        else {
+            return 0; // is a tie - it may be not sure if is a win or a l
