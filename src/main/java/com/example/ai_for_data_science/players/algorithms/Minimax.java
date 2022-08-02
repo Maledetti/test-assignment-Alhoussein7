@@ -143,4 +143,5 @@ public class Minimax implements Algorithm {
         if ((evalGameFinished == 2 && isPlayerOne) || (evalGameFinished == 1 && !isPlayerOne)) {
             return -100000 - depth; // minimax loses -> not a good situation -> return a huge negative value
         }
-        else if ((evalGameFinished == 1) || (evalGam
+        else if ((evalGameFinished == 1) || (evalGameFinished == 2)){
+            return 100000 + depth; // minimax wins -> 
