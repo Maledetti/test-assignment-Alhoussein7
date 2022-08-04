@@ -147,4 +147,9 @@ public class Minimax implements Algorithm {
             return 100000 + depth; // minimax wins -> a good situation -> return a huge positive value
         }
         else {
-            return 0; // is a tie - it may be not sure if is a win or a loose, but it is left for next iterations to be decided
+            return 0; // is a tie - it may be not sure if is a win or a loose, but it is left for next iterations to be decided if is a win or loose
+        }
+    }
+
+    /**
+     * Evaluates how good a n
