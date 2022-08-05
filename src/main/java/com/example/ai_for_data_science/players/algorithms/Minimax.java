@@ -153,4 +153,5 @@ public class Minimax implements Algorithm {
 
     /**
      * Evaluates how good a not won/tied position is.
-     * Checks each combination of 4 til
+     * Checks each combination of 4 tiles in a row, and sums the number of player1 discs - player2 discs
+  
