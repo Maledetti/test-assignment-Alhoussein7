@@ -152,4 +152,5 @@ public class Minimax implements Algorithm {
     }
 
     /**
-     * Evaluates how good a n
+     * Evaluates how good a not won/tied position is.
+     * Checks each combination of 4 til
