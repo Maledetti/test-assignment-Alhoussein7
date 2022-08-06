@@ -158,4 +158,7 @@ public class Minimax implements Algorithm {
      */
     private int evalGame(int[] gameBoard) {
 
-        int
+        int fourCellEval = 0;
+
+        // Horizontal check
+        for (int r
