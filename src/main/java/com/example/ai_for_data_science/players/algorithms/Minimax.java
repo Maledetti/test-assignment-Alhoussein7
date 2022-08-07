@@ -161,4 +161,5 @@ public class Minimax implements Algorithm {
         int fourCellEval = 0;
 
         // Horizontal check
-        for (int r
+        for (int row = 0; row < 6; row++) {
+            for (int col = 0; col <
