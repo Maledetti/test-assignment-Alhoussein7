@@ -172,4 +172,5 @@ public class Minimax implements Algorithm {
 
         // Vertical check
         for (int col = 0; col < 7; col++) {
-       
+            for (int row = 0; row < 6-3; row++) {
+                four
