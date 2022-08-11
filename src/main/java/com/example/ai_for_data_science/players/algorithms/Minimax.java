@@ -176,4 +176,8 @@ public class Minimax implements Algorithm {
                 fourCellEval += remapCellValue(gameBoard[col + row * 7]);
                 fourCellEval += remapCellValue(gameBoard[col + (row + 1) * 7]);
                 fourCellEval += remapCellValue(gameBoard[col + (row + 2) * 7]);
-                fourCellEval += remapCellValue(gameBoard[col + (row + 3) 
+                fourCellEval += remapCellValue(gameBoard[col + (row + 3) * 7]);
+            }
+        }
+
+        // diagonal (down + le
