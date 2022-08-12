@@ -180,4 +180,6 @@ public class Minimax implements Algorithm {
             }
         }
 
-        // diagonal (down + le
+        // diagonal (down + left) check
+        for (int col = 3; col < 7; col++){
+           
