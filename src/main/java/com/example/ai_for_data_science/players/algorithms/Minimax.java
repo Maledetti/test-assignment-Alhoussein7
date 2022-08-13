@@ -184,4 +184,5 @@ public class Minimax implements Algorithm {
         for (int col = 3; col < 7; col++){
             for (int row = 0; row < 6-3; row++){
                 fourCellEval += remapCellValue(gameBoard[col + row * 7]);
-                fourCellE
+                fourCellEval += remapCellValue(gameBoard[col - 1 + (row + 1) * 7]);
+         
