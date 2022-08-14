@@ -190,4 +190,5 @@ public class Minimax implements Algorithm {
             }
         }
 
- 
+        // diagonal (up + left) check
+        for (int col = 3; col <
