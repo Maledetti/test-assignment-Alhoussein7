@@ -200,4 +200,4 @@ public class Minimax implements Algorithm {
             }
         }
 
-        // System.out.println("gameBo
+        // System.out.println("gameBoard:  " + Connect4.gameBoardToString(gameBoard) + "    eval:  " 
