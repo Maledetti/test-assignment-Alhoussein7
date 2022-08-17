@@ -202,4 +202,9 @@ public class Minimax implements Algorithm {
 
         // System.out.println("gameBoard:  " + Connect4.gameBoardToString(gameBoard) + "    eval:  " + fourCellEval);
 
-        fourCellEval = isPlayerOne ? fourCellEval : - fou
+        fourCellEval = isPlayerOne ? fourCellEval : - fourCellEval;
+        return fourCellEval;
+    }
+
+
+    private int remapCellValue(int
