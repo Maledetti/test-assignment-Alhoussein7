@@ -209,3 +209,7 @@ public class Minimax implements Algorithm {
 
     private int remapCellValue(int value) {
         return (value == 2) ? -1 : value;  // 0->0, 1->1, 2->-1
+    }
+
+    public double getWinningRate() {
+        return winni
