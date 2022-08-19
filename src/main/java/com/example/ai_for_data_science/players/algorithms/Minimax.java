@@ -224,4 +224,6 @@ public class Minimax implements Algorithm {
     }
 
     public void setSpeedWinningRate(double speedWinningRate) {
-        this.speedWinnin
+        this.speedWinningRate = speedWinningRate;
+    }
+}
