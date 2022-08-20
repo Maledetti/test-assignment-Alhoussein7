@@ -30,3 +30,28 @@ public class RandomMinimax implements Algorithm {
         }
         else {
             return minimax.returnMove(gameBoard);
+        }
+    }
+
+    @Override
+    public void printResults() {
+
+    }
+
+    public double getWinningRate() {
+
+        return winningRate;
+    }
+
+    public void setWinningRate(double winningRate) {
+        this.winningRate = winningRate;
+    }
+
+    public double getSpeedWinningRate() {
+        return speedWinningRate;
+    }
+
+    public void setSpeedWinningRate(double speedWinningRate) {
+        this.speedWinningRate = speedWinningRate;
+    }
+}
