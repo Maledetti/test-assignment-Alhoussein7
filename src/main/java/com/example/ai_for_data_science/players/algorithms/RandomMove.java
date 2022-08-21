@@ -14,4 +14,5 @@ public class RandomMove implements Algorithm {
     Random random = new Random();
 
     @Override
-    public int 
+    public int returnMove(int[] gameBoard) {
+        ArrayList<Integer> availableMoves = Connect4.ge
