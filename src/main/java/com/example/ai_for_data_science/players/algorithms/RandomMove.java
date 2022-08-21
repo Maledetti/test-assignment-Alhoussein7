@@ -11,3 +11,7 @@ public class RandomMove implements Algorithm {
     double winningRate = 0;
     double speedWinningRate = 0;
 
+    Random random = new Random();
+
+    @Override
+    public int 
