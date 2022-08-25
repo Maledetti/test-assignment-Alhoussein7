@@ -16,4 +16,8 @@ public class RandomMove implements Algorithm {
     @Override
     public int returnMove(int[] gameBoard) {
         ArrayList<Integer> availableMoves = Connect4.getAvailableMoves(gameBoard);
-        return availableMoves.get(random.nextInt(
+        return availableMoves.get(random.nextInt(availableMoves.size()));
+    }
+
+    @Override
+    public void 
