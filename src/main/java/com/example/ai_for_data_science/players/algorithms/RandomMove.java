@@ -20,4 +20,9 @@ public class RandomMove implements Algorithm {
     }
 
     @Override
-    public void 
+    public void printResults() {
+
+    }
+
+    public double getWinningRate() {
+        return winni
