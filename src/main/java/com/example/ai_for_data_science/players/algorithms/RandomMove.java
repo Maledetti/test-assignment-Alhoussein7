@@ -29,4 +29,7 @@ public class RandomMove implements Algorithm {
     }
 
     public void setWinningRate(double winningRate) {
-        this.winni
+        this.winningRate = winningRate;
+    }
+
+    public double getSpeedWinni
