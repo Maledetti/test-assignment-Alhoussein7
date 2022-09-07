@@ -43,3 +43,61 @@ public class AlgorithmsWinningScores {
             file.write(algorithms.toJSONString());
             file.flush();
         } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void addAlgorithmScores(String algoName, double[] algoScores, JSONArray algorithms) {
+        for (String name : ALGO_NAMES) {
+            JSONObject algorithm = new JSONObject();
+            JSONObject algoItem = new JSONObject();
+            double[] algScores = name.equals(algoName) ? algoScores : getAlgScores(name);
+            algorithm.put("winningScore", algScores[1]);
+            algorithm.put("winningSpeedScore", algScores[0]);
+//            if (name.equals(algoName)) {
+//                algorithm.put("winningScore", algoScores[1]);
+//                algorithm.put("winningSpeedScore", algoScores[0]);
+//            } else {
+//                double[] oldScores = getAlgScores(name);
+//                algorithm.put("winningScore", oldScores[1]);
+//                algorithm.put("winningSpeedScore", oldScores[0]);
+//            }
+            algoItem.put(name, algorithm);
+            algorithms.add(algoItem);
+        }
+    }
+
+    /**
+     * Returns one algorithm's scores
+     * @param algoName the algorithm name
+     * @return a list containing the winningScore and the winningSpeedRate
+     */
+    public double[] getAlgScores(String algoName) {
+        int index = getIndex(algoName);
+        JSONParser jsonParser = new JSONParser();
+        return readAlgScores(algoName, index, jsonParser);
+    }
+
+    private double[] readAlgScores(String algoName, int index, JSONParser jsonParser) {
+        try (FileReader reader = new FileReader(".json/svmScores.json")) {
+            Object obj = jsonParser.parse(reader);
+            JSONArray algorithms = (JSONArray) obj;
+            return parseAlgorithm((JSONObject) algorithms.get(index), algoName);
+        } catch (IOException | ParseException e) {
+            e.printStackTrace();
+        }
+        return new double[]{0};
+    }
+
+    public void setScoresToZero() {
+        JSONArray algorithms = new JSONArray();
+
+        for (String name : ALGO_NAMES) {
+            JSONObject algorithm = new JSONObject();
+            JSONObject algoItem = new JSONObject();
+            double initScore = 0;
+            algorithm.put("winningScore", initScore);
+            algorithm.put("winningSpeedScore", initScore);
+            algoItem.put(name, algorithm);
+            algorithms.add(algoItem);
+        }
