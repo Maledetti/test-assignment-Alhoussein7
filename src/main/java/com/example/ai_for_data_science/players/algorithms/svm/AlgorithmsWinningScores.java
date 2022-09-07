@@ -101,3 +101,24 @@ public class AlgorithmsWinningScores {
             algoItem.put(name, algorithm);
             algorithms.add(algoItem);
         }
+
+        jsonWriteSvmScores(algorithms);
+    }
+
+    private int getIndex(String algoName) {
+        return algoName.equals("BayesianClassifier") ? 0 : algoName.equals("DecisionTree") ? 1
+                : algoName.equals("Human") ? 2 : algoName.equals("LinearRegression") ? 3
+                : algoName.equals("Minimax") ? 4 : algoName.equals("RandomMinimax") ? 5
+                : algoName.equals("RandomMove") ? 6 : 7;
+    }
+
+    private static double[] parseAlgorithm(JSONObject algo, String algoName) {
+
+        JSONObject algoScores = (JSONObject) algo.get(algoName);
+        double winningRate = (double) algoScores.get("winningScore");
+        double winningSpeedRate = (double) algoScores.get("winningSpeedScore");
+
+        return new double[]{winningRate, winningSpeedRate};
+    }
+
+}
