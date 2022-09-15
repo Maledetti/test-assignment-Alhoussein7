@@ -12,4 +12,7 @@ public class SVM {
     private ScorePlayers scorePlayers;
     private AlgorithmsWinningScores algScores;
 
-    priv
+    private SupportVectorMachine svm = null;
+
+    public SVM() {
+        
