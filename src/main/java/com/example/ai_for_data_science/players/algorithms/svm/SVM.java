@@ -8,4 +8,5 @@ import java.util.Arrays;
 public class SVM {
 
     private double[][] currentScores;
-   
+    private double[][][] testingData;
+    private ScorePla
