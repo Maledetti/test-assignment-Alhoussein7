@@ -15,4 +15,5 @@ public class SVM {
     private SupportVectorMachine svm = null;
 
     public SVM() {
-        
+        this.testingData = new double[5][][];
+        this.scorePlaye
