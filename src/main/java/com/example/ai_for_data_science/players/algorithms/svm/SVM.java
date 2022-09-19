@@ -16,4 +16,5 @@ public class SVM {
 
     public SVM() {
         this.testingData = new double[5][][];
-        this.scorePlaye
+        this.scorePlayers = new ScorePlayers();
+        this.algScores = new AlgorithmsWinningScores
