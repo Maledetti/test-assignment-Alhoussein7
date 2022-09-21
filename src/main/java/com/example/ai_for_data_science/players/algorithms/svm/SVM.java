@@ -18,4 +18,6 @@ public class SVM {
         this.testingData = new double[5][][];
         this.scorePlayers = new ScorePlayers();
         this.algScores = new AlgorithmsWinningScores();
-        this.currentScores = algScores.getPlayersScoreForNextGamePrediction("BayesianClas
+        this.currentScores = algScores.getPlayersScoreForNextGamePrediction("BayesianClassifier", "Human");
+        train();
+        printModelAccuracy(
