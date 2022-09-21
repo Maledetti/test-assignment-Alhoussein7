@@ -17,4 +17,5 @@ public class SVM {
     public SVM() {
         this.testingData = new double[5][][];
         this.scorePlayers = new ScorePlayers();
-        this.algScores = new AlgorithmsWinningScores
+        this.algScores = new AlgorithmsWinningScores();
+        this.currentScores = algScores.getPlayersScoreForNextGamePrediction("BayesianClas
