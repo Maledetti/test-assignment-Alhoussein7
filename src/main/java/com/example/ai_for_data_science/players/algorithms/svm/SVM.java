@@ -20,4 +20,9 @@ public class SVM {
         this.algScores = new AlgorithmsWinningScores();
         this.currentScores = algScores.getPlayersScoreForNextGamePrediction("BayesianClassifier", "Human");
         train();
-        printModelAccuracy(
+        printModelAccuracy();
+        printPrediction();
+
+    }
+
+    private int predictNewGame() {
