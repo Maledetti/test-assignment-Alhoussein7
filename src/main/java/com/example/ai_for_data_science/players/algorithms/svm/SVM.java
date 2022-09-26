@@ -26,3 +26,4 @@ public class SVM {
     }
 
     private int predictNewGame() {
+        return this.svm.predict(MatrixUtils.createRealMatrix(currentScore
