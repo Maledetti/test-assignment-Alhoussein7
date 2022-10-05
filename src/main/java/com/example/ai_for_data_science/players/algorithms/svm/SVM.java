@@ -29,4 +29,7 @@ public class SVM {
         return this.svm.predict(MatrixUtils.createRealMatrix(currentScores));
     }
     private int testPrediction(double[][] feature) {
-       
+        return this.svm.predict(MatrixUtils.createRealMatrix(feature));
+    }
+
+  
