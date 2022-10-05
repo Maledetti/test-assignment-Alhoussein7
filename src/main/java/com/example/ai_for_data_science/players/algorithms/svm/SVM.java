@@ -32,4 +32,5 @@ public class SVM {
         return this.svm.predict(MatrixUtils.createRealMatrix(feature));
     }
 
-  
+    private void printPrediction() {
+        System.out.println("\u001B[34m
