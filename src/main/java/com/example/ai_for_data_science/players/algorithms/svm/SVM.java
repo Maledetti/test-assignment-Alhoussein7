@@ -33,4 +33,4 @@ public class SVM {
     }
 
     private void printPrediction() {
-        System.out.println("\u001B[34m
+        System.out.println("\u001B[34m" + "\nNEXT GAME SVM WINNING PREDICTION :\n" +  "\u001B[0m" + "\u001B[
