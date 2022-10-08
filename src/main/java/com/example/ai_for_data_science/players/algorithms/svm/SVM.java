@@ -33,4 +33,4 @@ public class SVM {
     }
 
     private void printPrediction() {
-        System.out.println("\u001B[34m" + "\nNEXT GAME SVM WINNING PREDICTION :\n" +  "\u001B[0m" + "\u001B[
+        System.out.println("\u001B[34m" + "\nNEXT GAME SVM WINNING PREDICTION :\n" +  "\u001B[0m" + "\u001B[32m" + (predictNewGame() == 1 ? "BAYESIAN CLASSIFIER" : "HUMAN") +  "\n \u001B[
