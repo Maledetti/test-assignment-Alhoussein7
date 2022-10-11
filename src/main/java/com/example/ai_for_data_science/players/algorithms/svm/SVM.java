@@ -36,4 +36,5 @@ public class SVM {
         System.out.println("\u001B[34m" + "\nNEXT GAME SVM WINNING PREDICTION :\n" +  "\u001B[0m" + "\u001B[32m" + (predictNewGame() == 1 ? "BAYESIAN CLASSIFIER" : "HUMAN") +  "\n \u001B[0m");
     }
 
-    private void printModelAccuracy()
+    private void printModelAccuracy(){
+        System.out.println("SVM ACCURACY:" + (testingSVM() * 100) +
