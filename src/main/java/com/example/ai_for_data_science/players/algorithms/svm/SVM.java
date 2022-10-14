@@ -41,4 +41,6 @@ public class SVM {
     }
 
     public void train() {
-        long startTime = System.nanoTi
+        long startTime = System.nanoTime();
+        double[][][] trainingSet = getTrainingDataSet();
+        double[][]
