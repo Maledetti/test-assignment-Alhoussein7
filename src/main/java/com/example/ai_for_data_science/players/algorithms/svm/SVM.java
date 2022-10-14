@@ -37,4 +37,8 @@ public class SVM {
     }
 
     private void printModelAccuracy(){
-        System.out.println("SVM ACCURACY:" + (testingSVM() * 100) +
+        System.out.println("SVM ACCURACY:" + (testingSVM() * 100) + "% ");
+    }
+
+    public void train() {
+        long startTime = System.nanoTi
