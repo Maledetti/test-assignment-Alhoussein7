@@ -43,4 +43,5 @@ public class SVM {
     public void train() {
         long startTime = System.nanoTime();
         double[][][] trainingSet = getTrainingDataSet();
-        double[][]
+        double[][] features = new double[trainingSet.length][2];
+        double[][] labels = new double[training
