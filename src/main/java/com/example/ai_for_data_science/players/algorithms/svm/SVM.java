@@ -47,4 +47,5 @@ public class SVM {
         double[][] labels = new double[trainingSet.length][1];
 
         for (int i = 0; i < trainingSet.length; i++) {
-          
+            setFeaturesAndLabels(trainingSet, features, labels, i);
+            if (i < 5
