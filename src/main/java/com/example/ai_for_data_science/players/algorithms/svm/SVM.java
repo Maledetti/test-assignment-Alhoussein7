@@ -48,4 +48,8 @@ public class SVM {
 
         for (int i = 0; i < trainingSet.length; i++) {
             setFeaturesAndLabels(trainingSet, features, labels, i);
-            if (i < 5
+            if (i < 5){
+                setTestingSet(trainingSet, i);
+            }
+        }
+     
