@@ -53,4 +53,6 @@ public class SVM {
             }
         }
         //System.out.println("testing data: " + Arrays.deepToString(testingData));
-        //System.out.println("testing data acc
+        //System.out.println("testing data accuracy: " + testingSVM());
+
+        System.out.println("\u001B[34m" 
