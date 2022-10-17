@@ -52,4 +52,4 @@ public class SVM {
                 setTestingSet(trainingSet, i);
             }
         }
-     
+        //System.out.println("testing data: " + Arrays.deepToStrin
