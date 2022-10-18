@@ -56,4 +56,5 @@ public class SVM {
         //System.out.println("testing data accuracy: " + testingSVM());
 
         System.out.println("\u001B[34m" + "SVM Training Data Set:" + "\u001B[0m");
-        //System.out.println(
+        //System.out.println(Arrays.deepToString(trainingSet));
+        System
