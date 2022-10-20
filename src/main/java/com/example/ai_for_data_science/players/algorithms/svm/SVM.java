@@ -58,4 +58,4 @@ public class SVM {
         System.out.println("\u001B[34m" + "SVM Training Data Set:" + "\u001B[0m");
         //System.out.println(Arrays.deepToString(trainingSet));
         System.out.println("FEATURES :  " + Arrays.deepToString(features));
-        System
+        System.out.println("LABELS   :  " + Arrays.deepToString(labels));
