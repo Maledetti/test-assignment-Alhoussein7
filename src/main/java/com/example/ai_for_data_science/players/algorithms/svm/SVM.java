@@ -59,3 +59,5 @@ public class SVM {
         //System.out.println(Arrays.deepToString(trainingSet));
         System.out.println("FEATURES :  " + Arrays.deepToString(features));
         System.out.println("LABELS   :  " + Arrays.deepToString(labels));
+
+        this.svm = new SupportVectorMachine(MatrixUtils.createRealMatrix(fea
