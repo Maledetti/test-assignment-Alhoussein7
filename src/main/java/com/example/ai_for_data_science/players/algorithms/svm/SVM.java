@@ -61,4 +61,6 @@ public class SVM {
         System.out.println("LABELS   :  " + Arrays.deepToString(labels));
 
         this.svm = new SupportVectorMachine(MatrixUtils.createRealMatrix(features), MatrixUtils.createRealMatrix(labels));
-        long endTi
+        long endTime = System.nanoTime();
+        long trainingTime = endTime - startTime;
+        System
