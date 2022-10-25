@@ -63,4 +63,4 @@ public class SVM {
         this.svm = new SupportVectorMachine(MatrixUtils.createRealMatrix(features), MatrixUtils.createRealMatrix(labels));
         long endTime = System.nanoTime();
         long trainingTime = endTime - startTime;
-        System
+        System.out.println("SVM model Training time for the length " + trainingSet.length
