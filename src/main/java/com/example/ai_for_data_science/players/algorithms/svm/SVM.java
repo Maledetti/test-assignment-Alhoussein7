@@ -65,4 +65,7 @@ public class SVM {
         long trainingTime = endTime - startTime;
         System.out.println("SVM model Training time for the length " + trainingSet.length + " is : " + trainingTime/1000000 + "(milliseconds)");
         System.out.println("TrainingTime/DataSetSize -> " + ((trainingTime/1000000)/trainingSet.length));
-        displayInfoTables(features,
+        displayInfoTables(features, labels);
+    }
+
+    private void setTestingSet(double[][][] trainingData, int i) {
