@@ -72,4 +72,4 @@ public class SVM {
         testingData[i] = trainingData[i];
     }
 
-    private static
+    private static void setFeaturesAndLabels(double[][][] trainingData, double[][] features, double[][] label
