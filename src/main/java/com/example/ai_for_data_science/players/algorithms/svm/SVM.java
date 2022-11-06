@@ -69,3 +69,7 @@ public class SVM {
     }
 
     private void setTestingSet(double[][][] trainingData, int i) {
+        testingData[i] = trainingData[i];
+    }
+
+    private static
