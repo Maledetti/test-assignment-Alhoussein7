@@ -72,4 +72,6 @@ public class SVM {
         testingData[i] = trainingData[i];
     }
 
-    private static void setFeaturesAndLabels(double[][][] trainingData, double[][] features, double[][] label
+    private static void setFeaturesAndLabels(double[][][] trainingData, double[][] features, double[][] labels, int i) {
+        features[i][0] = trainingData[i][0][0];
+        fea
