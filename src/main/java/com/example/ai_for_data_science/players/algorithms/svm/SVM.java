@@ -78,4 +78,5 @@ public class SVM {
         labels[i][0] = trainingData[i][1][0];
     }
 
-    private void displayInfoTables(double
+    private void displayInfoTables(double[][] features, double[][] labels) {
+        String alignFormat 
