@@ -79,4 +79,5 @@ public class SVM {
     }
 
     private void displayInfoTables(double[][] features, double[][] labels) {
-        String alignFormat 
+        String alignFormat = "| %-40s | %-17s | %-21s |%n";
+        System.out.println("\u001B[34m" + "\
