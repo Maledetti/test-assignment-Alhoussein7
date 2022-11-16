@@ -82,4 +82,4 @@ public class SVM {
         String alignFormat = "| %-40s | %-17s | %-21s |%n";
         System.out.println("\u001B[34m" + "\nThe SVM model has the following configuration:" +  "\u001B[0m");
         System.out.println("\u001B[36m");
-        System.out.format("
+        System.out.format("+------------------------------------------+-------------------+------
