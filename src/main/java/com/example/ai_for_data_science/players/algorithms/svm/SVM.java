@@ -84,4 +84,5 @@ public class SVM {
         System.out.println("\u001B[36m");
         System.out.format("+------------------------------------------+-------------------+-----------------------+%n");
         System.out.format("|               SUPPORT VECTOR             |       label       |     optimized alpha   |%n");
-        System.out.format("+------------------------------------------+
+        System.out.format("+------------------------------------------+-------------------+-----------------------+%n");
+        for (int i = 0
