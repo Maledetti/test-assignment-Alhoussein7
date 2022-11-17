@@ -83,4 +83,4 @@ public class SVM {
         System.out.println("\u001B[34m" + "\nThe SVM model has the following configuration:" +  "\u001B[0m");
         System.out.println("\u001B[36m");
         System.out.format("+------------------------------------------+-------------------+-----------------------+%n");
-        System.out.format("|               SUPPORT VE
+        System.out.format("|               SUPPORT VECTOR             |       label       |     optimized alph
