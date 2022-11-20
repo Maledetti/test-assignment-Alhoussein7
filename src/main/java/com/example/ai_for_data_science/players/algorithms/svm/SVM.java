@@ -86,4 +86,5 @@ public class SVM {
         System.out.format("|               SUPPORT VECTOR             |       label       |     optimized alpha   |%n");
         System.out.format("+------------------------------------------+-------------------+-----------------------+%n");
         for (int i = 0; i < features.length; i++) {
-            if (this.svm.getΑlpha().getData()[i][0] > 0.000009 && this.svm.getΑlpha().getData()[i][0] != this.svm.S
+            if (this.svm.getΑlpha().getData()[i][0] > 0.000009 && this.svm.getΑlpha().getData()[i][0] != this.svm.SOFT_PARAM_C) {
+                StringBuffer label = new StringBuffer(String.valueOf
