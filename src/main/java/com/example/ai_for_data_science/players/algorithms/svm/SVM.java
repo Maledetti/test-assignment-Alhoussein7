@@ -85,4 +85,5 @@ public class SVM {
         System.out.format("+------------------------------------------+-------------------+-----------------------+%n");
         System.out.format("|               SUPPORT VECTOR             |       label       |     optimized alpha   |%n");
         System.out.format("+------------------------------------------+-------------------+-----------------------+%n");
-        for (int i = 0
+        for (int i = 0; i < features.length; i++) {
+            if (this.svm.getΑlpha().getData()[i]
