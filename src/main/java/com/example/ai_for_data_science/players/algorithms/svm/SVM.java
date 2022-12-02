@@ -89,4 +89,7 @@ public class SVM {
             if (this.svm.getΑlpha().getData()[i][0] > 0.000009 && this.svm.getΑlpha().getData()[i][0] != this.svm.SOFT_PARAM_C) {
                 StringBuffer label = new StringBuffer(String.valueOf(labels[i][0]));
                 label.setLength(5);
-                System.out.format(alignFormat, Arrays.toString(features[i]), label.substring(0,4),  String.valueOf(svm.getΑlpha().getData()[i][0]).substring(0,15)
+                System.out.format(alignFormat, Arrays.toString(features[i]), label.substring(0,4),  String.valueOf(svm.getΑlpha().getData()[i][0]).substring(0,15));
+            }
+        }
+        System.out.format("+-----------------
