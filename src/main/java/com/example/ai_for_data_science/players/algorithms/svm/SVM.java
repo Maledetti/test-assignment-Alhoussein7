@@ -92,4 +92,4 @@ public class SVM {
                 System.out.format(alignFormat, Arrays.toString(features[i]), label.substring(0,4),  String.valueOf(svm.getΑlpha().getData()[i][0]).substring(0,15));
             }
         }
-        System.out.format("+-----------------
+        System.out.format("+------------------------------------------+-------------------+----------------------
