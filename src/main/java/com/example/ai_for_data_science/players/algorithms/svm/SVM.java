@@ -95,4 +95,5 @@ public class SVM {
         System.out.format("+------------------------------------------+-------------------+-----------------------+%n");
         String newAlignFormat = "| %-45s | %-17s |%n";
         System.out.format("+-----------------------------------------------+-------------------+%n");
-        System.out.format("|                 
+        System.out.format("|                      w                        |    optimized b    |%n");
+    
