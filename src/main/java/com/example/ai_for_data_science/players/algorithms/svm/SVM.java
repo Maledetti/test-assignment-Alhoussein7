@@ -98,4 +98,4 @@ public class SVM {
         System.out.format("|                      w                        |    optimized b    |%n");
         System.out.format("+-----------------------------------------------+-------------------+%n");
         System.out.format(newAlignFormat, "< " + svm.getW().getData()[0][0] + " | " + svm.getW().getData()[1][0] + " >", String.valueOf(svm.getB()).substring(0, 15));
-  
+        System.out.format("+-----------------------------------------------+--
