@@ -102,4 +102,6 @@ public class SVM {
         System.out.println("\u001B[0m");
     }
 
-    pr
+    private double testingSVM(){
+        int successfulTesting = 0;
+        for(doub
