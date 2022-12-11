@@ -104,4 +104,5 @@ public class SVM {
 
     private double testingSVM(){
         int successfulTesting = 0;
-        for(doub
+        for(double[][] pair: testingData){
+            double[][] feature = new doub
