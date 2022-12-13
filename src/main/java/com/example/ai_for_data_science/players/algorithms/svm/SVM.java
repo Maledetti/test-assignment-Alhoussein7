@@ -107,4 +107,8 @@ public class SVM {
         for(double[][] pair: testingData){
             double[][] feature = new double[1][2];
             int index = 0;
-            for (double score: pa
+            for (double score: pair[0]){
+                feature[0][index] = score;
+                index++;
+            }
+ 
