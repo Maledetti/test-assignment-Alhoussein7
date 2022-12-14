@@ -111,4 +111,5 @@ public class SVM {
                 feature[0][index] = score;
                 index++;
             }
- 
+            if (testPrediction(feature) == (int) pair[1][0])
+             
