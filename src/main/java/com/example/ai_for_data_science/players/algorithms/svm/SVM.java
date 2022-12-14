@@ -112,4 +112,6 @@ public class SVM {
                 index++;
             }
             if (testPrediction(feature) == (int) pair[1][0])
-             
+                successfulTesting++;
+        }
+        return (double) successfulTesting/testing
