@@ -117,4 +117,6 @@ public class SVM {
         return (double) successfulTesting/testingData.length;
     }
 
-    private double[][][] getTrainingDataSet() 
+    private double[][][] getTrainingDataSet() {
+        return scorePlayers.getTrainingData();
+//        double[][][] da
