@@ -114,4 +114,7 @@ public class SVM {
             if (testPrediction(feature) == (int) pair[1][0])
                 successfulTesting++;
         }
-        return (double) successfulTesting/testing
+        return (double) successfulTesting/testingData.length;
+    }
+
+    private double[][][] getTrainingDataSet() 
