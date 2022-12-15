@@ -119,4 +119,5 @@ public class SVM {
 
     private double[][][] getTrainingDataSet() {
         return scorePlayers.getTrainingData();
-//        double[][][] da
+//        double[][][] data = scorePlayers.getTrainingData();
+//        System.out.println(Arrays.de
