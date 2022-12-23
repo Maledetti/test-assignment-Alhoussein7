@@ -121,4 +121,6 @@ public class SVM {
         return scorePlayers.getTrainingData();
 //        double[][][] data = scorePlayers.getTrainingData();
 //        System.out.println(Arrays.deepToString(data));
-//        double[][][] trainingData = new double[data.le
+//        double[][][] trainingData = new double[data.length][][];
+//        for (int i = 0; i < data.length; i++){
+//     
