@@ -124,4 +124,5 @@ public class SVM {
 //        double[][][] trainingData = new double[data.length][][];
 //        for (int i = 0; i < data.length; i++){
 //            for(int j = 0; j < data[i].length; j++){
-//                for(int k = 0; k <
+//                for(int k = 0; k < data[i][j].length; k++){
+//                    System.out.println(data[i][j][k]
