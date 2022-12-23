@@ -123,4 +123,5 @@ public class SVM {
 //        System.out.println(Arrays.deepToString(data));
 //        double[][][] trainingData = new double[data.length][][];
 //        for (int i = 0; i < data.length; i++){
-//     
+//            for(int j = 0; j < data[i].length; j++){
+//                for(int k = 0; k <
