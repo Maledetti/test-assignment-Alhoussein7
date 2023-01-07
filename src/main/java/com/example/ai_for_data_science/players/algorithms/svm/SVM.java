@@ -135,4 +135,6 @@ public class SVM {
 //        return trainingData;
     }
 
-//    publ
+//    public static void main(String[] args) {
+//        new SVM();
+//    }
