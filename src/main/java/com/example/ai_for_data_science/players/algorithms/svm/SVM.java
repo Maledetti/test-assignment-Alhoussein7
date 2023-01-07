@@ -128,4 +128,5 @@ public class SVM {
 //                    System.out.println(data[i][j][k]);
 //                    System.out.println(Double.isFinite(data[i][j][k]));
 //                    trainingData[i][j][k] = data[i][j][k];
-//      
+//                    System.out.println(trainingData[i][j][k]);
+//                }
