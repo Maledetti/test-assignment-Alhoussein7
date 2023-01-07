@@ -130,3 +130,9 @@ public class SVM {
 //                    trainingData[i][j][k] = data[i][j][k];
 //                    System.out.println(trainingData[i][j][k]);
 //                }
+//            }
+//        }
+//        return trainingData;
+    }
+
+//    publ
