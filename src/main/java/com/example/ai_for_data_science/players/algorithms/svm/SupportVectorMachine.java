@@ -75,3 +75,76 @@ public class SupportVectorMachine {
             }
 
         }
+        return αOptimizedPaired;
+    }
+
+    private RealMatrix multiplyTwoMatrices(RealMatrix m1, RealMatrix m2) {
+        double[][] product = new double[m1.getData().length][m1.getData()[0].length];
+        IntStream.range(0, m1.getData().length).forEach(row -> IntStream.range(0, m1.getData()[0].length).forEach(col -> product[row][col] = m1.getEntry(row, col) * m2.getEntry(row, col)));
+        return MatrixUtils.createRealMatrix(product);
+    }
+
+    private boolean αKKTValidation(double α, double error) {
+        // to move forward α has to violate the KKT (Karush-Kuhn Tucker) conditions:
+        //      1] α = 0 -> correctly label example with room to spare
+        //      2] α = c -> misclassified  label example
+        //      3] 0 < α < c = 0 -> the example is a Support Vector
+        return ((α > 0 && Math.abs(error) < EPSILON) || (α < SOFT_PARAM_C && Math.abs(error) > EPSILON));
+    }
+
+    private int secondAlphaOptimizationIndex(int α1, int rows) {
+        int α2 = α1;
+        while (α1 == α2) {
+            α2 = ThreadLocalRandom.current().nextInt(0, rows - 1);
+        }
+        return α2;
+    }
+
+    private double[] αBounds(double α1, double α2, double y1, double y2) {
+        double[] bounds = new double[2];
+        bounds[0] = (y1 != y2) ? Math.max(0, α2 - α1)
+                : Math.max(0, α2 + α1 - SOFT_PARAM_C);
+
+        bounds[1] = (y1 != y2) ? Math.min(SOFT_PARAM_C, α2 - α1 + SOFT_PARAM_C)
+                : Math.min(SOFT_PARAM_C, α2 + α1);
+        return bounds;
+    }
+
+    private boolean optimizeAlphaPair(int i, int j, double firstAlphaError, double secondAlphaError, double η, double[] bounds, double αi, double αj) {
+        boolean flag = false;
+        α.setEntry(j, 0, α.getEntry(j, 0) - y.getEntry(j, 0) * (firstAlphaError - secondAlphaError) / η);
+        αjClipping(j, bounds[1], bounds[0]); // clipping the αj, to be use for the optimization of the αi
+        if (Math.abs(α.getEntry(j, 0) - αj) >= MIN_ALPHA_OPT) { // optimization of the αi with same value as αj, but in opposite direction
+            αiOptimization(i, j, αj);
+            flag = true;
+        }
+        return flag;
+    }
+
+    /**
+     * Optimization of the αi with same value as αj, but in opposite direction
+     *
+     * @param i
+     * @param j
+     * @param αj
+     */
+    private void αiOptimization(int i, int j, double αj) {
+        α.setEntry(i, 0, (α.getEntry(i, 0) + y.getEntry(j, 0) * y.getEntry(i, 0) * (αj - α.getEntry(j, 0))));
+    }
+
+    private void optimizeB(double firstAlphaError, double secondAlphaError, double αi, double αj, int i, int j) {
+
+        double b1 = computeB(firstAlphaError, αi, αj, i, j, x.getRowMatrix(i));
+        double b2 = computeB(secondAlphaError, αi, αj, i, j, x.getRowMatrix(j));
+
+        if (0 < α.getRowMatrix(i).getEntry(0, 0) && SOFT_PARAM_C > α.getRowMatrix(i).getEntry(0, 0)) b = b1;
+        else if (0 < α.getRowMatrix(j).getEntry(0, 0) && SOFT_PARAM_C > α.getRowMatrix(j).getEntry(0, 0)) b = b2;
+        else b = (b1 + b2) / 2.0;
+    }
+
+    private double computeB(double alphaError, double αi, double αj, int i, int j, RealMatrix rowMatrix) {
+        return b - alphaError - multiplyTwoMatrices(y.getRowMatrix(i), α.getRowMatrix(i).scalarAdd(-αi)).
+                multiply(x.getRowMatrix(i).multiply(rowMatrix.transpose())).getEntry(0, 0)
+                - multiplyTwoMatrices(y.getRowMatrix(j), α.getRowMatrix(j).scalarAdd(-αj)).
+                multiply(rowMatrix.multiply(x.getRowMatrix(j).transpose())).getEntry(0, 0);
+    }
