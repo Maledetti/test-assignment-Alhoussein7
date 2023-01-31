@@ -61,3 +61,54 @@ public class ScorePlayers {
                 String label = lineInArray[2];
                 double[][] row = new double[][]{{Double.parseDouble(feature1), Double.parseDouble(feature2)}, {Double.parseDouble(label)}};
                 trainingData.add(row);
+            }
+            double[][][] data = new double[trainingData.size()][][];
+            for (int i = 0; i < trainingData.size(); i++) {
+                data[i] = trainingData.get(i);
+            }
+            return data;
+        } catch (CsvException | IOException e) {
+            e.printStackTrace();
+        }
+        return new double[1][][];
+    }
+
+    private static void reduceDataSet() {
+        try (CSVReader reader = new CSVReader(new FileReader(".csv/svmTrainingData.csv"))) {
+            List<String[]> data = reader.readAll();
+            if (data.size() > MAXIMUM_NUMBER_OF_RECORDS) {
+                CSVWriter writer = new CSVWriter(new FileWriter(".csv/svmTrainingData.csv"));
+                writer.writeAll(data.subList(data.size() - MAXIMUM_NUMBER_OF_RECORDS, data.size()));
+                writer.close();
+            }
+        } catch (IOException | CsvException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public static void addNewRecord(double[] scores, int label) throws IOException {
+        String features = Arrays.toString(scores);
+        Scanner scanner = new Scanner(new File(".csv/svmTrainingData.csv"));
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            if (line.contains(features + ",")) {
+                return;
+            }
+        }
+
+        BufferedWriter writer = new BufferedWriter(new FileWriter(".csv/svmTrainingData.csv", true));
+
+
+        writer.write(String.format("%s,%s\n", features, label));
+        writer.close();
+
+    }
+
+    public static void updatePlayersScore(double[][] newScores) {
+        String[] algNames = new String[]{"BayesianClassifier", "Human"};
+        for (int i = 0; i < newScores.length; i++) {
+            algScores.fillAlgoScores(algNames[i], newScores[i]);
+        }
+    }
+}
