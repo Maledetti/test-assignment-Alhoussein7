@@ -148,3 +148,47 @@ public class SupportVectorMachine {
                 - multiplyTwoMatrices(y.getRowMatrix(j), α.getRowMatrix(j).scalarAdd(-αj)).
                 multiply(rowMatrix.multiply(x.getRowMatrix(j).transpose())).getEntry(0, 0);
     }
+
+    private void αjClipping(int j, double highBound, double lowBound) {
+        if (α.getEntry(j, 0) < lowBound) α.setEntry(j, 0, lowBound);
+        if (α.getEntry(j, 0) > highBound) α.setEntry(j, 0, highBound);
+    }
+
+    public int predict(RealMatrix entry) {
+        return (int) Math.signum(entry.multiply(w).getEntry(0, 0)+ b);
+    }
+
+    private RealMatrix calcW() {
+        double[][] wValues = new double[x.getData()[0].length][1];
+        IntStream.range(0, wValues.length).forEach(i -> wValues[i][0] = 0.0);
+        RealMatrix wMatrix = MatrixUtils.createRealMatrix(wValues);
+        for (int i = 0; i < x.getData().length; i++)
+            wMatrix = wMatrix.add(x.getRowMatrix(i).transpose()
+                    .scalarMultiply(y.getRowMatrix(i).multiply(α.getRowMatrix(i)).getEntry(0, 0)));
+        return wMatrix;
+    }
+
+    public RealMatrix getΑlpha() {
+        return α;
+    }
+
+    public RealMatrix getW() {
+        return w;
+    }
+
+    public double getB() {
+        return b;
+    }
+
+    public RealMatrix getX() {
+        return x;
+    }
+
+    public RealMatrix getY() {
+        return y;
+    }
+
+    public double getSOFT_PARAM_C() {
+        return SOFT_PARAM_C;
+    }
+}
