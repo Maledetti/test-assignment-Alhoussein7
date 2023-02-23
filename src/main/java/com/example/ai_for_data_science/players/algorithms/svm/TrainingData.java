@@ -15,4 +15,6 @@ public class TrainingData {
                     {{0.420258556547619, 0.5383802083333333}, {-1}}
             };
     public double[][][] returnTrainingDataSet(){
-        retu
+        return trainingDataSet;
+    }
+}
