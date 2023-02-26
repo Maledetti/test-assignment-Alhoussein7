@@ -10,4 +10,5 @@ module com.example.ai_for_data_science {
 
     opens com.example.ai_for_data_science to javafx.fxml;
     exports com.example.ai_for_data_science;
-    exports com.example.ai_for_
+    exports com.example.ai_for_data_science.players.algorithms.svm;
+    opens com.example.ai_
