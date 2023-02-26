@@ -9,4 +9,5 @@ module com.example.ai_for_data_science {
 
 
     opens com.example.ai_for_data_science to javafx.fxml;
-    exports com
+    exports com.example.ai_for_data_science;
+    exports com.example.ai_for_
